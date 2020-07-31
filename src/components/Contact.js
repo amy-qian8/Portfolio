@@ -20,6 +20,7 @@ const useStyles = makeStyles((theme) => ({
     maxWidth: "35rem",
     marginTop: theme.spacing(4),
     margin: "auto",
+    backgroundColor: "lightgrey",
   },
   formWrapper: {
     marginTop: theme.spacing(3),
@@ -30,8 +31,8 @@ const useStyles = makeStyles((theme) => ({
   },
   avatar: {
     marginTop: theme.spacing(2),
-    // backgroundColor: "coral",
-    backgroundColor: theme.palette.primary.main,
+    backgroundColor: "var(--theme-coral)",
+    // backgroundColor: theme.palette.primary.main,
   },
   form: {
     width: "100%",
@@ -94,7 +95,8 @@ const Contact = () => {
             Contact Me
           </Typography>
           <Typography variant="subtitle1" style={{ textAlign: "center" }}>
-            I'm currently searching for a Summer 2021 Internship in mechanical engineering.
+            I'm currently searching for a Summer 2021 Internship in mechanical
+            engineering. Feel free to fill out this form or email me at aqian@g.hmc.edu.
           </Typography>
           <form onSubmit={handleSubmit} id="contact" className={classes.form}>
             <TextField
@@ -157,7 +159,11 @@ const Contact = () => {
               fullWidth
               variant="contained"
               color="primary"
-              className={classes.submit}
+              style={{
+                backgroundColor: "var(--theme-coral)",
+                color: "white",
+                margin: "1.5rem 0",
+              }}
               endIcon={<SendIcon />}
             >
               Send
@@ -166,89 +172,6 @@ const Contact = () => {
         </div>
       </Paper>
     </>
-    // <Box
-    //   component="div"
-    //   style={{ background: "var(--theme-forest)", height: "100vh" }}
-    // >
-    //   <Navbar />
-    //   <Grid container justify="center">
-    //     <Box className={classes.form}>
-    //       <Typography
-    //         variant="h5"
-    //         style={{
-    //           color: "var(--theme-coral)",
-    //           textAlign: "center",
-    //           textTransform: "uppercase",
-    //         }}
-    //       >
-    //         Contact Me
-    //       </Typography>
-    //       <form onSubmit={handleSubmit} id="contact">
-    //         <TextField
-    //           fullWidth={true}
-    //           label="Name"
-    //           variant="outlined"
-    //           required
-    //           onChange={updateInput}
-    //           value={formData.name || ""}
-    //           inputProps={{ style: { color: "white" } }}
-    //           margin="dense"
-    //           size="medium"
-    //         />
-    //         <br />
-
-    //         <TextField
-    //           fullWidth={true}
-    //           label="Email"
-    //           variant="outlined"
-    //           required
-    //           onChange={updateInput}
-    //           value={formData.email || ""}
-    //           inputProps={{ style: { color: "white" } }}
-    //           margin="dense"
-    //           size="medium"
-    //         />
-    //         <br />
-
-    //         <TextField
-    //           fullWidth={true}
-    //           label="Company Name"
-    //           variant="outlined"
-    //           // onChange={updateInput}
-    //           inputProps={{ style: { color: "white" } }}
-    //           margin="dense"
-    //           size="medium"
-    //         />
-    //         <br />
-
-    //         <TextField
-    //           fullWidth={true}
-    //           label="Your Message"
-    //           multiline
-    //           rows={5}
-    //           required
-    //           onChange={updateInput}
-    //           value={formData.message || ""}
-    //           variant="outlined"
-    //           inputProps={{ style: { color: "white" } }}
-    //           margin="dense"
-    //           size="medium"
-    //         />
-    //         <br />
-
-    //         <Button
-    //           type="submit"
-    //           className={classes.button}
-    //           variant="outlined"
-    //           fullWidth={true}
-    //           endIcon={<SendIcon />}
-    //         >
-    //           Send
-    //         </Button>
-    //       </form>
-    //     </Box>
-    //   </Grid>
-    // </Box>
   );
 };
 

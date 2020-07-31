@@ -12,13 +12,12 @@ import {
   Typography,
 } from "@material-ui/core";
 import Navbar from "./Navbar";
-import project1 from "../images/html-css-javascript-lg.jpg";
-import project2 from "../images/javascript-fullstack.jpg";
-import project3 from "../images/react-redux.jpg";
-import project4 from "../images/mern-stack.jpg";
 
 import SusCompImg from "../images/suslogo.svg";
 import CovidImg from "../images/covidlogo.png";
+import AvatarImg from "../avatar.png";
+import SolidworksImg from "../images/solidworks.png";
+import MuddSubImg from "../images/muddsub.png";
 
 const useStyles = makeStyles({
   mainContainer: {
@@ -46,7 +45,7 @@ const Portfolio = () => {
                 alt="Project 1"
                 height="140"
                 image={SusCompImg}
-                style={{ objectFit: "contain", backgroundColor: "#24a133" }}
+                style={{ objectFit: "contain", backgroundColor: "#c0f1c5" }}
               />
               <CardContent>
                 <Typography gutterBottom variant="h5">
@@ -96,7 +95,7 @@ const Portfolio = () => {
                 alt="Project 2"
                 height="140"
                 image={CovidImg}
-                style={{ objectFit: "contain", backgroundColor: "#ec6c70" }}
+                style={{ objectFit: "contain", backgroundColor: "#f7c3c4" }}
               />
               <CardContent>
                 <Typography gutterBottom variant="h5">
@@ -143,17 +142,21 @@ const Portfolio = () => {
                 component="img"
                 alt="Project 3"
                 height="140"
-                image={project3}
+                image={AvatarImg}
+                style={{
+                  objectFit: "contain",
+                  backgroundColor: "var(--theme-coral)",
+                }}
               />
               <CardContent>
                 <Typography gutterBottom variant="h5">
-                  Project 3
+                  My Portfolio
                 </Typography>
                 <Typography variant="body2" color="textSecondary" component="p">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                  laboris nisi ut aliquip ex ea commodo consequat.
+                  I created this website, my portfolio with React JS and
+                  Material UI. Using my skills I've learned from create the PWA,
+                  I wanted to showcase my experiences and projects on a website!
+                  Check it out on mobile too, it's responsive!
                 </Typography>
               </CardContent>
             </CardActionArea>
@@ -162,8 +165,7 @@ const Portfolio = () => {
                 size="small"
                 color="primary"
                 onClick={() => {
-                  window.location =
-                    "https://github.com/2020summerstartup/sustainability";
+                  window.location = "https://github.com/amy-qian8/Portfolio";
                   return null;
                 }}
               >
@@ -173,8 +175,7 @@ const Portfolio = () => {
                 size="small"
                 color="primary"
                 onClick={() => {
-                  window.location =
-                    "http://sustainability-competition.netlify.app/";
+                  window.location = "http://amyqian.netlify.app/";
                   return null;
                 }}
               >
@@ -191,17 +192,19 @@ const Portfolio = () => {
                 component="img"
                 alt="Project 4"
                 height="140"
-                image={project4}
+                image={MuddSubImg}
+                style={{ objectFit: "contain", backgroundColor: "#e8a906" }}
               />
               <CardContent>
                 <Typography gutterBottom variant="h5">
-                  Project 4
+                  MuddSub Robotics Club
                 </Typography>
                 <Typography variant="body2" color="textSecondary" component="p">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                  laboris nisi ut aliquip ex ea commodo consequat.
+                  Excited to be able to join MuddSub as part of the mechanical
+                  design team and learn more about the engineering design
+                  process by CADing on Solidworks. We are currently designing a
+                  gripper to pick up game pieces in the underwater robotics
+                  competition hosted by RoboSub.
                 </Typography>
               </CardContent>
             </CardActionArea>
@@ -215,7 +218,59 @@ const Portfolio = () => {
                   return null;
                 }}
               >
-                Github Repo
+                Solidworks
+              </Button>
+              <Button
+                size="small"
+                color="primary"
+                onClick={() => {
+                  window.location =
+                    "http://sustainability-competition.netlify.app/";
+                  return null;
+                }}
+              >
+                Live Demo
+              </Button>
+            </CardActions>
+          </Card>
+        </Grid>
+        {/* Project 5 */}
+        <Grid item xs={12} sm={8} md={6}>
+          <Card className={classes.cardContainer}>
+            <CardActionArea>
+              <CardMedia
+                component="img"
+                alt="Project 5"
+                height="140"
+                image={SolidworksImg}
+                style={{
+                  objectFit: "contain",
+                  backgroundColor: "var(--theme-grey)",
+                }}
+              />
+              <CardContent>
+                <Typography gutterBottom variant="h5">
+                  SolidWorks Personal Projects
+                </Typography>
+                <Typography variant="body2" color="textSecondary" component="p">
+                  Wanting to gain more practice with Solidworks this summer, I
+                  followed Youtube tutorials on smaller projects like a pushpin,
+                  spiral staircase, and a volleyball. Solidworks is such a great
+                  design tool and I'm excited to get more familiar with it!
+                </Typography>
+              </CardContent>
+            </CardActionArea>
+            <CardActions>
+              <Button
+                size="small"
+                color="primary"
+                onClick={() => {
+                  window.location =
+                    "https://github.com/2020summerstartup/sustainability";
+                  return null;
+                }}
+              >
+                Solidworks
               </Button>
               <Button
                 size="small"

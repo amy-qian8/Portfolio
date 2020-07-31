@@ -1,3 +1,26 @@
+ /* variables for colors used throughout portfolio */
+ 
+/* Living Coral (#FC766AFF), Storm Gray (#B0B8B4FF) and Forest Biome (#184A45FF) */
+:root {
+  --theme-coral: #FC766AFF;
+  --theme-grey: #B0B8B4FF;
+  --theme-forest: #184A45FF;
+}
+
+/* customize scrollbar */
+body::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+body::-webkit-scrollbar-track {
+  background: #222;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: grey;
+}
+
+/* customize background */
 body {
   background: url(background.jpg) no-repeat center center fixed;
   -webkit-background: cover;

@@ -1,4 +1,5 @@
 import React from 'react';
+
 import Navbar from './Navbar';
 import Header from './Header';
 import Particles from 'react-particles-js';
@@ -33,7 +34,7 @@ const Home = () => {
                   type: "circle",
                   stroke: {
                     width: 1,
-                    color: "tomato",
+                    color: "--theme-coral",
                   }
                 },
                 size: {

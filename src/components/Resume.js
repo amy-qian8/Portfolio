@@ -5,7 +5,7 @@ import Navbar from "./Navbar";
 
 const useStyles = makeStyles((theme) => ({
   mainContainer: {
-    background: "#233",
+    background: "var(--theme-forest)",
   },
   timeLine: {
     position: "relative",
@@ -15,7 +15,7 @@ const useStyles = makeStyles((theme) => ({
       content: "''",
       position: "absolute",
       height: "100%",
-      border: "1px solid tan",
+      border: "1px solid var(--theme-grey)",
       right: "40px",
       top: 0,
     },
@@ -34,7 +34,7 @@ const useStyles = makeStyles((theme) => ({
   },
   timeLineItem: {
     padding: "1rem",
-    borderBottom: "2px solid tan",
+    borderBottom: "2px solid var(--theme-grey)",
     position: "relative",
     margin: "1rem 3rem 1rem 1rem",
     clear: "both",
@@ -48,7 +48,8 @@ const useStyles = makeStyles((theme) => ({
       right: "-0.625rem",
       top: "calc(50% - 1px)",
       borderStyle: "solid",
-      borderColor: "tomato tomato transparent transparent",
+      borderColor:
+        "var(--theme-coral) var(--theme-coral) transparent transparent",
       borderWidth: "0.625rem",
       transform: "rotate(45deg)",
     },
@@ -58,12 +59,13 @@ const useStyles = makeStyles((theme) => ({
       "&:nth-of-type(2n)": {
         float: "right",
         margin: "1rem",
-        borderColor: "tan",
+        borderColor: "var(--theme-grey)",
       },
       "&:nth-of-type(2n):before": {
         right: "auto",
         left: "-0.625rem",
-        borderColor: "transparent transparent tomato tomato",
+        borderColor:
+          "transparent transparent var(--theme-coral) var(--theme-coral)",
       },
     },
   },
@@ -72,7 +74,7 @@ const useStyles = makeStyles((theme) => ({
     maxWidth: "9.375rem",
     margin: "0 3rem 0 auto",
     fontSize: "1.5rem",
-    background: "tomato",
+    background: "var(--theme-coral)",
     color: "white",
     lineHeight: "1",
     padding: "0.5rem 0 1rem",
@@ -92,7 +94,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   heading: {
-    color: "tomato",
+    color: "var(--theme-coral)",
     padding: "3rem 0",
     textTransform: "uppercase",
   },
@@ -110,14 +112,14 @@ const Resume = () => {
       <Navbar />
       <Box component="header" className={classes.mainContainer}>
         <Typography variant="h4" align="center" className={classes.heading}>
-          working experience
+          Work Experience
         </Typography>
         <Box component="div" className={classes.timeLine}>
           <Typography
             variant="h2"
             className={`${classes.timeLineYear} ${classes.timeLineItem}`}
           >
-            2013
+            2019
           </Typography>
           <Box component="div" className={classes.timeLineItem}>
             <Typography
@@ -125,23 +127,32 @@ const Resume = () => {
               align="center"
               className={classes.subHeading}
             >
-              web design
+              Intern
             </Typography>
-            <Typography variant="body1" align="center" style={{color: "tomato"}}>
-              company name where worked
+            <Typography
+              variant="body1"
+              align="center"
+              style={{ color: "var(--theme-coral)" }}
+            >
+              Zymo Research
             </Typography>
-            <Typography variant="subtitle1" align="center" style={{color: "tan"}}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.
+            <Typography
+              variant="subtitle1"
+              align="center"
+              style={{ color: "var(--theme-grey)" }}
+            >
+              • Assisted quality control with racking, labeling, and capping
+              tubes of buffers and solutions • Trained 3 new employees the
+              protocols in assembly • Assembled thousands of DNA/RNA kits with a
+              team of 8 people by aliquoting buffers and categorizing
+              spin-columns
             </Typography>
           </Box>
           <Typography
             variant="h2"
             className={`${classes.timeLineYear} ${classes.timeLineItem}`}
           >
-            2014
+            2019 - Present
           </Typography>
           <Box component="div" className={classes.timeLineItem}>
             <Typography
@@ -149,23 +160,30 @@ const Resume = () => {
               align="center"
               className={classes.subHeading}
             >
-              html & css
+              Tour Guide
             </Typography>
-            <Typography variant="body1" align="center" style={{color: "tomato"}}>
-              company name where worked
+            <Typography
+              variant="body1"
+              align="center"
+              style={{ color: "var(--theme-coral)" }}
+            >
+              Harvey Mudd College
             </Typography>
-            <Typography variant="subtitle1" align="center" style={{color: "tan"}}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.
+            <Typography
+              variant="subtitle1"
+              align="center"
+              style={{ color: "var(--theme-grey)" }}
+            >
+              • Lead prospective students and their families through academic
+              and residential parts of campus • Advise students about the
+              college application process
             </Typography>
           </Box>
           <Typography
             variant="h2"
             className={`${classes.timeLineYear} ${classes.timeLineItem}`}
           >
-            2015
+            2020 - Present
           </Typography>
           <Box component="div" className={classes.timeLineItem}>
             <Typography
@@ -173,19 +191,25 @@ const Resume = () => {
               align="center"
               className={classes.subHeading}
             >
-              javascript full stack
+              Computer Science Grader and Tutor
             </Typography>
-            <Typography variant="body1" align="center" style={{color: "tomato"}}>
-              company name where worked
+            <Typography
+              variant="body1"
+              align="center"
+              style={{ color: "var(--theme-coral)" }}
+            >
+              Harvey Mudd College
             </Typography>
-            <Typography variant="subtitle1" align="center" style={{color: "tan"}}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.
+            <Typography
+              variant="subtitle1"
+              align="center"
+              style={{ color: "var(--theme-grey)" }}
+            >
+              • Assist in grading and tutoring freshman in their introductory
+              computer science course
             </Typography>
           </Box>
-          <Typography
+          {/* <Typography
             variant="h2"
             className={`${classes.timeLineYear} ${classes.timeLineItem}`}
           >
@@ -199,10 +223,18 @@ const Resume = () => {
             >
               react | redux
             </Typography>
-            <Typography variant="body1" align="center" style={{color: "tomato"}}>
+            <Typography
+              variant="body1"
+              align="center"
+              style={{ color: "var(--theme-coral)" }}
+            >
               company name where worked
             </Typography>
-            <Typography variant="subtitle1" align="center" style={{color: "tan"}}>
+            <Typography
+              variant="subtitle1"
+              align="center"
+              style={{ color: "var(--theme-grey)" }}
+            >
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               enim ad minim veniam, quis nostrud exercitation ullamco laboris
@@ -223,16 +255,24 @@ const Resume = () => {
             >
               mern stack
             </Typography>
-            <Typography variant="body1" align="center" style={{color: "tomato"}}>
+            <Typography
+              variant="body1"
+              align="center"
+              style={{ color: "var(--theme-coral)" }}
+            >
               company name where worked
             </Typography>
-            <Typography variant="subtitle1" align="center" style={{color: "tan"}}>
+            <Typography
+              variant="subtitle1"
+              align="center"
+              style={{ color: "var(--theme-grey)" }}
+            >
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               enim ad minim veniam, quis nostrud exercitation ullamco laboris
               nisi ut aliquip ex ea commodo consequat.
             </Typography>
-          </Box>
+          </Box> */}
         </Box>
       </Box>
     </>

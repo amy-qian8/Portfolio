@@ -6,19 +6,19 @@ import GitHubIcon from "@material-ui/icons/GitHub";
 import FacebookIcon from "@material-ui/icons/Facebook";
 
 const useStyles = makeStyles({
-    root: {
-        "& .MuiBottomNavigationAction-root": {
-            minWidth: 0,
-            maxWdith: 250,
-        },
-        "& .MuiSvgIcon-root": {
-            fill: "tan",
-            "&:hover": {
-                fill: "tomato",
-                fontSize: "1.8rem"
-            }
-        }
-    }
+  root: {
+    "& .MuiBottomNavigationAction-root": {
+      minWidth: 0,
+      maxWdith: 250,
+    },
+    "& .MuiSvgIcon-root": {
+      fill: "var(--theme-grey)",
+      "&:hover": {
+        fill: "var(--theme-coral)",
+        fontSize: "1.8rem",
+      },
+    },
+  },
 });
 
 const Footer = () => {
@@ -29,16 +29,28 @@ const Footer = () => {
         className={classes.root}
         style={{ padding: 0 }}
         icon={<LinkedInIcon />}
+        onClick={() => {
+          window.location = "https://www.linkedin.com/in/amy-qian8/";
+          return null;
+        }}
       />
       <BottomNavigationAction
         className={classes.root}
         style={{ padding: 0 }}
         icon={<GitHubIcon />}
+        onClick={() => {
+          window.location = "https://github.com/amy-qian8";
+          return null;
+        }}
       />
       <BottomNavigationAction
         className={classes.root}
         style={{ padding: 0 }}
         icon={<FacebookIcon />}
+        onClick={() => {
+          window.location = "https://www.facebook.com/amy.qian8/";
+          return null;
+        }}
       />
     </BottomNavigation>
   );

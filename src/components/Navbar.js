@@ -17,7 +17,7 @@ import {
   Box,
 } from "@material-ui/core";
 import {
-  ArrowBack,
+  Menu,
   AssignmentInd,
   Home,
   Apps,
@@ -29,7 +29,7 @@ import avatar from "../avatar.png";
 const useStyles = makeStyles((theme) => ({
   menuSliderContainer: {
     width: 250,
-    background: "#511",
+    background: "var(--theme-forest)",
     height: "100%",
   },
   avatar: {
@@ -39,7 +39,7 @@ const useStyles = makeStyles((theme) => ({
     height: theme.spacing(15),
   },
   listItem: {
-    color: "tan",
+    color: "var(--theme-coral)",
   },
 }));
 
@@ -68,7 +68,7 @@ const menuItems = [
 
 const NavBar = () => {
   const [state, setState] = useState({
-    right: false,
+    left: false,
   });
 
   const toggleSlider = (slider, open) => () => {
@@ -109,18 +109,18 @@ const NavBar = () => {
       <Box component="nav">
         <AppBar position="static" style={{ background: "#222" }}>
           <Toolbar>
-            <IconButton onClick={toggleSlider("right", true)}>
-              <ArrowBack style={{ color: "tomato" }} />
+            <IconButton onClick={toggleSlider("left", true)}>
+              <Menu style={{ color: "var(--theme-grey)" }} />
             </IconButton>
-            <Typography variant="h5" style={{ color: "tan" }}>
+            <Typography variant="h5" style={{ color: "var(--theme-coral)" }}>
               My Portfolio
             </Typography>
             <MobileRightMenuSlider
-              anchor="right"
-              open={state.right}
-              onClose={toggleSlider("right", false)}
+              anchor="left"
+              open={state.left}
+              onClose={toggleSlider("left", false)}
             >
-              {sideList("right")}
+              {sideList("left")}
               <Footer />
             </MobileRightMenuSlider>
           </Toolbar>

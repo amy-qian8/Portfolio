@@ -12,9 +12,9 @@ const useStyles = makeStyles({
       maxWdith: 250,
     },
     "& .MuiSvgIcon-root": {
-      fill: "var(--theme-grey)",
+      fill: "white",
       "&:hover": {
-        fill: "var(--theme-coral)",
+        fill: "var(--theme-accent)",
         fontSize: "1.8rem",
       },
     },

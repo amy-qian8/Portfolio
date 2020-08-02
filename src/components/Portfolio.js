@@ -21,12 +21,18 @@ import MuddSubImg from "../images/muddsub.png";
 
 const useStyles = makeStyles({
   mainContainer: {
-    background: "#233",
+    background: "var(--theme-bg)",
     height: "100%",
   },
   cardContainer: {
     maxWidth: 345,
     margin: "5rem auto",
+  },
+  projectTitle: {
+    fontWeight: "bold",
+  },
+  projectDescription: {
+    fontWeight: "bold",
   },
 });
 
@@ -48,10 +54,19 @@ const Portfolio = () => {
                 style={{ objectFit: "contain", backgroundColor: "#c0f1c5" }}
               />
               <CardContent>
-                <Typography gutterBottom variant="h5">
+                <Typography
+                  gutterBottom
+                  variant="h5"
+                  className={classes.projectTitle}
+                >
                   Sustainability Competition Progressive Web App
                 </Typography>
-                <Typography variant="body2" color="textSecondary" component="p">
+                <Typography
+                  variant="body2"
+                  color="textSecondary"
+                  component="p"
+                  className={classes.projectDescription}
+                >
                   Working with 4 other Mudders over 10 weeks over the Summer of
                   2020, we develeped a PWA for Harvey Mudd's Sustainability
                   Clubs to hold dorm competitions to foster eco-friendly habits
@@ -98,10 +113,19 @@ const Portfolio = () => {
                 style={{ objectFit: "contain", backgroundColor: "#f7c3c4" }}
               />
               <CardContent>
-                <Typography gutterBottom variant="h5">
+                <Typography
+                  gutterBottom
+                  variant="h5"
+                  className={classes.projectTitle}
+                >
                   COVID-19 Tracker
                 </Typography>
-                <Typography variant="body2" color="textSecondary" component="p">
+                <Typography
+                  variant="body2"
+                  color="textSecondary"
+                  component="p"
+                  className={classes.projectDescription}
+                >
                   During this COVID-19 crisis, I created this personal project
                   following a Youtube Tutorial. In this React JS Application, I
                   used an API to fetch data and presents the data with numbers
@@ -145,14 +169,23 @@ const Portfolio = () => {
                 image={AvatarImg}
                 style={{
                   objectFit: "contain",
-                  backgroundColor: "var(--theme-coral)",
+                  backgroundColor: "#c09bb8",
                 }}
               />
               <CardContent>
-                <Typography gutterBottom variant="h5">
+                <Typography
+                  gutterBottom
+                  variant="h5"
+                  className={classes.projectTitle}
+                >
                   My Portfolio
                 </Typography>
-                <Typography variant="body2" color="textSecondary" component="p">
+                <Typography
+                  variant="body2"
+                  color="textSecondary"
+                  component="p"
+                  className={classes.projectDescription}
+                >
                   I created this website, my portfolio with React JS and
                   Material UI. Using my skills I've learned from create the PWA,
                   I wanted to showcase my experiences and projects on a website!
@@ -193,13 +226,22 @@ const Portfolio = () => {
                 alt="Project 4"
                 height="140"
                 image={MuddSubImg}
-                style={{ objectFit: "contain", backgroundColor: "#e8a906" }}
+                style={{ objectFit: "contain", backgroundColor: "#f1cb69" }}
               />
               <CardContent>
-                <Typography gutterBottom variant="h5">
+                <Typography
+                  gutterBottom
+                  variant="h5"
+                  className={classes.projectTitle}
+                >
                   MuddSub Robotics Club
                 </Typography>
-                <Typography variant="body2" color="textSecondary" component="p">
+                <Typography
+                  variant="body2"
+                  color="textSecondary"
+                  component="p"
+                  className={classes.projectDescription}
+                >
                   Excited to be able to join MuddSub as part of the mechanical
                   design team and learn more about the engineering design
                   process by CADing on Solidworks. We are currently designing a
@@ -245,14 +287,23 @@ const Portfolio = () => {
                 image={SolidworksImg}
                 style={{
                   objectFit: "contain",
-                  backgroundColor: "var(--theme-grey)",
+                  backgroundColor: "#ADB2D3",
                 }}
               />
               <CardContent>
-                <Typography gutterBottom variant="h5">
+                <Typography
+                  gutterBottom
+                  variant="h5"
+                  className={classes.projectTitle}
+                >
                   SolidWorks Personal Projects
                 </Typography>
-                <Typography variant="body2" color="textSecondary" component="p">
+                <Typography
+                  variant="body2"
+                  color="textSecondary"
+                  component="p"
+                  className={classes.projectDescription}
+                >
                   Wanting to gain more practice with Solidworks this summer, I
                   followed Youtube tutorials on smaller projects like a pushpin,
                   spiral staircase, and a volleyball. Solidworks is such a great

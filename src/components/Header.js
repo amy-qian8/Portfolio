@@ -12,20 +12,23 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: "1rem",
   },
   title: {
-    color: "var(--theme-coral)",
+    color: "var(--theme-secondary)",
+    fontWeight: "bold",
   },
   subtitle: {
-    color: "var(--theme-grey)",
+    color: "var(--theme-accent)",
     marginBottom: "3rem",
+    fontWeight: "bold",
   },
   typedContainer: {
     position: "absolute",
     top: "50%",
     left: "50%",
     transform: "translate(-50%, -50%)",
-    width: "100vh",
+    width: "100%",
     textAlign: "center",
     zIndex: 1,
+    padding: "0 1rem"
   },
 }));
 
@@ -43,7 +46,7 @@ const Header = () => {
       <Typography className={classes.subtitle} variant="h5">
         <Typed
           strings={[
-            "Sophomore at Harvey Mudd",
+            "Sophomore at Harvey Mudd College",
             "Engineering Major",
             "Ready to make a positive impact!",
           ]}

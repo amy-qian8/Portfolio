@@ -1,15 +1,17 @@
- /* variables for colors used throughout portfolio */
- 
-/* Living Coral (#FC766AFF), Storm Gray (#B0B8B4FF) and Forest Biome (#184A45FF) */
+/* variables for colors used throughout portfolio */
+
 :root {
-  --theme-coral: #FC766AFF;
-  --theme-grey: #B0B8B4FF;
-  --theme-forest: #184A45FF;
+  --theme-primary: #813772;
+  --theme-secondary: #1d7874;
+  --theme-tertiary: #062f4f;
+  --theme-accent: #d00f27;
+  /* blue-grey color from laptop background */
+  --theme-bg: #a1abb1;
 }
 
 /* customize scrollbar */
 body::-webkit-scrollbar {
-  width: 0.5rem;
+  width: 0.6rem;
 }
 
 body::-webkit-scrollbar-track {
@@ -17,12 +19,15 @@ body::-webkit-scrollbar-track {
 }
 
 body::-webkit-scrollbar-thumb {
-  background: grey;
+  background: var(--theme-primary);
 }
 
 /* customize background */
 body {
-  background: url(background.jpg) no-repeat center center fixed;
+  background: url(https://images.unsplash.com/photo-1519332978332-21b7d621d05e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=60)
+    no-repeat center center fixed;
+  /* background: url(https://images.unsplash.com/photo-1493723843671-1d655e66ac1c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=60)
+    no-repeat center center fixed; */
   -webkit-background: cover;
   -moz-background: cover;
   -o-background: cover;

@@ -8,10 +8,10 @@ import { createMuiTheme, ThemeProvider } from "@material-ui/core/styles";
 const theme = createMuiTheme({
   palette: {
     primary: {
-      main: "#FC766AF", //coral
+      main: "#813772", //purple
     },
     secondary: {
-      main: "#B0B8B4FF", //grey
+      main: "#882601", //red
     },
   },
 });

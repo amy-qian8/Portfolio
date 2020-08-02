@@ -5,17 +5,19 @@ import Navbar from "./Navbar";
 
 const useStyles = makeStyles((theme) => ({
   mainContainer: {
-    background: "var(--theme-forest)",
+    background: "var(--theme-bg)", 
   },
   timeLine: {
     position: "relative",
     padding: "1rem",
     margin: "0 auto",
+    overflow: "hidden",
     "&:before": {
       content: "''",
       position: "absolute",
       height: "100%",
-      border: "1px solid var(--theme-grey)",
+      border: "3px solid var(--theme-secondary)",
+      marginBottom: "2rem",
       right: "40px",
       top: 0,
     },
@@ -34,9 +36,9 @@ const useStyles = makeStyles((theme) => ({
   },
   timeLineItem: {
     padding: "1rem",
-    borderBottom: "2px solid var(--theme-grey)",
+    borderBottom: "3px solid var(--theme-tertiary)",
     position: "relative",
-    margin: "1rem 3rem 1rem 1rem",
+    margin: "1rem 3rem 3rem 1rem",
     clear: "both",
     "&:after": {
       content: "''",
@@ -49,23 +51,25 @@ const useStyles = makeStyles((theme) => ({
       top: "calc(50% - 1px)",
       borderStyle: "solid",
       borderColor:
-        "var(--theme-coral) var(--theme-coral) transparent transparent",
+        "var(--theme-accent) var(--theme-accent) transparent transparent",
       borderWidth: "0.625rem",
       transform: "rotate(45deg)",
     },
     [theme.breakpoints.up("md")]: {
       width: "44%",
       margin: "1rem",
+      marginBottom: "3rem",
       "&:nth-of-type(2n)": {
         float: "right",
         margin: "1rem",
-        borderColor: "var(--theme-grey)",
+        marginBottom: "3rem",
+        borderColor: "var(--theme-tertiary)",
       },
       "&:nth-of-type(2n):before": {
         right: "auto",
         left: "-0.625rem",
         borderColor:
-          "transparent transparent var(--theme-coral) var(--theme-coral)",
+          "transparent transparent var(--theme-accent) var(--theme-accent)",
       },
     },
   },
@@ -74,7 +78,7 @@ const useStyles = makeStyles((theme) => ({
     maxWidth: "9.375rem",
     margin: "0 3rem 0 auto",
     fontSize: "1.5rem",
-    background: "var(--theme-coral)",
+    background: "var(--theme-primary)",
     color: "white",
     lineHeight: "1",
     padding: "0.5rem 0 1rem",
@@ -94,12 +98,15 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   heading: {
-    color: "var(--theme-coral)",
-    padding: "3rem 0",
+    color: "var(--theme-primary)",
+    padding: "3rem 0 2rem 0",
     textTransform: "uppercase",
+    fontWeight: "bold",
+    textShadow: "1px 1px 2px white",
   },
   subHeading: {
-    color: "white",
+    color: "var(--theme-accent)",
+    fontWeight: "bold",
     padding: "0",
     textTransform: "uppercase",
   },
@@ -115,70 +122,7 @@ const Resume = () => {
           Work Experience
         </Typography>
         <Box component="div" className={classes.timeLine}>
-          <Typography
-            variant="h2"
-            className={`${classes.timeLineYear} ${classes.timeLineItem}`}
-          >
-            2019
-          </Typography>
-          <Box component="div" className={classes.timeLineItem}>
-            <Typography
-              variant="h5"
-              align="center"
-              className={classes.subHeading}
-            >
-              Intern
-            </Typography>
-            <Typography
-              variant="body1"
-              align="center"
-              style={{ color: "var(--theme-coral)" }}
-            >
-              Zymo Research
-            </Typography>
-            <Typography
-              variant="subtitle1"
-              align="center"
-              style={{ color: "var(--theme-grey)" }}
-            >
-              • Assisted quality control with racking, labeling, and capping
-              tubes of buffers and solutions • Trained 3 new employees the
-              protocols in assembly • Assembled thousands of DNA/RNA kits with a
-              team of 8 people by aliquoting buffers and categorizing
-              spin-columns
-            </Typography>
-          </Box>
-          <Typography
-            variant="h2"
-            className={`${classes.timeLineYear} ${classes.timeLineItem}`}
-          >
-            2019 - Present
-          </Typography>
-          <Box component="div" className={classes.timeLineItem}>
-            <Typography
-              variant="h5"
-              align="center"
-              className={classes.subHeading}
-            >
-              Tour Guide
-            </Typography>
-            <Typography
-              variant="body1"
-              align="center"
-              style={{ color: "var(--theme-coral)" }}
-            >
-              Harvey Mudd College
-            </Typography>
-            <Typography
-              variant="subtitle1"
-              align="center"
-              style={{ color: "var(--theme-grey)" }}
-            >
-              • Lead prospective students and their families through academic
-              and residential parts of campus • Advise students about the
-              college application process
-            </Typography>
-          </Box>
+          {/* Experience 1 */}
           <Typography
             variant="h2"
             className={`${classes.timeLineYear} ${classes.timeLineItem}`}
@@ -194,21 +138,93 @@ const Resume = () => {
               Computer Science Grader and Tutor
             </Typography>
             <Typography
-              variant="body1"
+              variant="h6"
               align="center"
-              style={{ color: "var(--theme-coral)" }}
+              gutterBottom
+              style={{ color: "var(--theme-tertiary)", fontWeight: "bold" }}
             >
               Harvey Mudd College
             </Typography>
             <Typography
-              variant="subtitle1"
+              variant="body1"
               align="center"
-              style={{ color: "var(--theme-grey)" }}
+              style={{ color: "var(--theme-secondary)", fontWeight: "bold" }}
             >
               • Assist in grading and tutoring freshman in their introductory
               computer science course
             </Typography>
           </Box>
+
+          {/* Experience 2 */}
+          <Typography
+            variant="h2"
+            className={`${classes.timeLineYear} ${classes.timeLineItem}`}
+          >
+            2019 - Present
+          </Typography>
+          <Box component="div" className={classes.timeLineItem}>
+            <Typography
+              variant="h5"
+              align="center"
+              className={classes.subHeading}
+            >
+              Tour Guide
+            </Typography>
+            <Typography
+              variant="h6"
+              align="center"
+              gutterBottom
+              style={{ color: "var(--theme-tertiary)", fontWeight: "bold" }}
+            >
+              Harvey Mudd College
+            </Typography>
+            <Typography
+              variant="body1"
+              align="center"
+              style={{ color: "var(--theme-secondary)", fontWeight: "bold" }}
+            >
+              • Lead prospective students and their families through academic
+              and residential parts of campus <br />• Advise students about the
+              college application process
+            </Typography>
+          </Box>
+
+          {/* Experience 3 */}
+          <Typography
+            variant="h2"
+            className={`${classes.timeLineYear} ${classes.timeLineItem}`}
+          >
+            2019
+          </Typography>
+          <Box component="div" className={classes.timeLineItem}>
+            <Typography
+              variant="h5"
+              align="center"
+              className={classes.subHeading}
+            >
+              Intern
+            </Typography>
+            <Typography
+              variant="h6"
+              align="center"
+              gutterBottom
+              style={{ color: "var(--theme-tertiary)", fontWeight: "bold" }}
+            >
+              Zymo Research
+            </Typography>
+            <Typography
+              variant="body1"
+              align="center"
+              style={{ color: "var(--theme-secondary)", fontWeight: "bold" }}
+            >
+              • Assisted quality control with racking, labeling, and capping
+              tubes of buffers and solutions <br />• Trained 3 new employees the
+              protocols in assembly <br />• Assembled thousands of DNA/RNA kits
+              with a team of 8 people by aliquoting buffers and categorizing
+              spin-columns
+            </Typography>
+          </Box>
+
           {/* <Typography
             variant="h2"
             className={`${classes.timeLineYear} ${classes.timeLineItem}`}
@@ -224,16 +240,16 @@ const Resume = () => {
               react | redux
             </Typography>
             <Typography
-              variant="body1"
+              variant="h6"
               align="center"
-              style={{ color: "var(--theme-coral)" }}
+              style={{ color: "var(--theme-primary)" }}
             >
               company name where worked
             </Typography>
             <Typography
-              variant="subtitle1"
+              variant="body1"
               align="center"
-              style={{ color: "var(--theme-grey)" }}
+              style={{ color: "var(--theme-secondary)" }}
             >
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
@@ -256,16 +272,16 @@ const Resume = () => {
               mern stack
             </Typography>
             <Typography
-              variant="body1"
+              variant="h6"
               align="center"
-              style={{ color: "var(--theme-coral)" }}
+              style={{ color: "var(--theme-primary)" }}
             >
               company name where worked
             </Typography>
             <Typography
-              variant="subtitle1"
+              variant="body1"
               align="center"
-              style={{ color: "var(--theme-grey)" }}
+              style={{ color: "var(--theme-secondary)" }}
             >
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut

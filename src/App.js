@@ -5,6 +5,7 @@ import "./App.css";
 import Home from "./components";
 import Resume from "./components/Resume";
 import Portfolio from "./components/Portfolio";
+import Extra from "./components/Extra";
 import Contact from "./components/Contact";
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
       <Route exact path="/" component={Home} />
       <Route path="/resume" component={Resume} />
       <Route path="/portfolio" component={Portfolio} />
+      <Route path="/extracurriculars" component={Extra} />
       <Route path="/contact" component={Contact} />
     </>
   );

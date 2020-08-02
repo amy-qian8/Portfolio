@@ -12,18 +12,26 @@ import Paper from "@material-ui/core/Paper";
 import Avatar from "@material-ui/core/Avatar";
 import QuestionAnswerIcon from "@material-ui/icons/QuestionAnswer";
 import PersonIcon from "@material-ui/icons/Person";
+import BusinessIcon from "@material-ui/icons/Business";
 import EmailIcon from "@material-ui/icons/Email";
 import MessageIcon from "@material-ui/icons/Message";
+
+import Snackbar from "@material-ui/core/Snackbar";
+import MuiAlert from "@material-ui/lab/Alert";
+
+function Alert(props) {
+  return <MuiAlert elevation={6} variant="filled" {...props} />;
+}
 
 const useStyles = makeStyles((theme) => ({
   paper: {
     maxWidth: "35rem",
     marginTop: theme.spacing(4),
     margin: "auto",
-    backgroundColor: "lightgrey",
   },
   formWrapper: {
     marginTop: theme.spacing(3),
+    marginBottom: theme.spacing(3),
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
@@ -31,8 +39,7 @@ const useStyles = makeStyles((theme) => ({
   },
   avatar: {
     marginTop: theme.spacing(2),
-    backgroundColor: "var(--theme-coral)",
-    // backgroundColor: theme.palette.primary.main,
+    backgroundColor: "var(--theme-primary)",
   },
   form: {
     width: "100%",
@@ -44,12 +51,33 @@ const useStyles = makeStyles((theme) => ({
   submit: {
     margin: theme.spacing(3, 0, 2),
   },
+  alert: {
+    width: "100%",
+    "& > * + *": {
+      marginTop: theme.spacing(2),
+    },
+  },
 }));
 
 const Contact = () => {
   const classes = useStyles();
   const [formData, setFormData] = useState({});
+  const [open, setOpen] = useState(false);
 
+  // Success Alert
+  const handleClick = () => {
+    setOpen(true);
+  };
+
+  const handleClose = (event, reason) => {
+    if (reason === "clickaway") {
+      return;
+    }
+
+    setOpen(false);
+  };
+
+  // Form
   const updateInput = (e) => {
     setFormData({
       ...formData,
@@ -61,6 +89,7 @@ const Contact = () => {
     sendEmail();
     setFormData({
       name: "",
+      company: "",
       email: "",
       message: "",
     });
@@ -73,10 +102,12 @@ const Contact = () => {
       .then((res) => {
         firestore.collection("emails").add({
           name: formData.name,
+          company: formData.company,
           email: formData.email,
           message: formData.message,
           time: new Date(),
         });
+        handleClick()
       })
       .catch((error) => {
         console.log(error);
@@ -91,12 +122,27 @@ const Contact = () => {
           <Avatar className={classes.avatar}>
             <QuestionAnswerIcon />
           </Avatar>
-          <Typography variant="h4" style={{ margin: "1rem 0" }}>
+          <Typography
+            variant="h4"
+            style={{
+              margin: "1rem 0",
+              // color: "var(--theme-accent)",
+              // fontWeight: "bold",
+            }}
+          >
             Contact Me
           </Typography>
-          <Typography variant="subtitle1" style={{ textAlign: "center" }}>
+          <Typography
+            variant="subtitle1"
+            style={{
+              textAlign: "center",
+              // color: "var(--theme-secondary)",
+              // fontWeight: "bold",
+            }}
+          >
             I'm currently searching for a Summer 2021 Internship in mechanical
-            engineering. Feel free to fill out this form or email me at aqian@g.hmc.edu.
+            engineering. Feel free to fill out this form or email me at
+            aqian@g.hmc.edu.
           </Typography>
           <form onSubmit={handleSubmit} id="contact" className={classes.form}>
             <TextField
@@ -112,9 +158,20 @@ const Contact = () => {
               autoComplete="name"
               InputProps={{
                 startAdornment: <PersonIcon className={classes.formIcon} />,
-                classes: {
-                  adornedEnd: classes.adornedEnd,
-                },
+              }}
+            />
+            <TextField
+              variant="outlined"
+              margin="normal"
+              fullWidth
+              onChange={updateInput}
+              value={formData.company || ""}
+              id="company"
+              label="Company"
+              name="company"
+              autoComplete="company"
+              InputProps={{
+                startAdornment: <BusinessIcon className={classes.formIcon} />,
               }}
             />
             <TextField
@@ -130,9 +187,6 @@ const Contact = () => {
               autoComplete="email"
               InputProps={{
                 startAdornment: <EmailIcon className={classes.formIcon} />,
-                classes: {
-                  adornedEnd: classes.adornedEnd,
-                },
               }}
             />
             <TextField
@@ -149,9 +203,6 @@ const Contact = () => {
               id="message"
               InputProps={{
                 startAdornment: <MessageIcon className={classes.formIcon} />,
-                classes: {
-                  adornedEnd: classes.adornedEnd,
-                },
               }}
             />
             <Button
@@ -159,8 +210,9 @@ const Contact = () => {
               fullWidth
               variant="contained"
               color="primary"
+              // onClick={handleClick}
               style={{
-                backgroundColor: "var(--theme-coral)",
+                backgroundColor: "var(--theme-primary)",
                 color: "white",
                 margin: "1.5rem 0",
               }}
@@ -168,6 +220,12 @@ const Contact = () => {
             >
               Send
             </Button>
+
+            <Snackbar open={open} autoHideDuration={6000} onClose={handleClose}>
+              <Alert onClose={handleClose} severity="success">
+                Thank you! Your message has been sent!
+              </Alert>
+            </Snackbar>
           </form>
         </div>
       </Paper>

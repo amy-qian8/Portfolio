@@ -22,6 +22,7 @@ import {
   Home,
   Apps,
   ContactMail,
+  School,
 } from "@material-ui/icons";
 import avatar from "../avatar.png";
 
@@ -29,17 +30,18 @@ import avatar from "../avatar.png";
 const useStyles = makeStyles((theme) => ({
   menuSliderContainer: {
     width: 250,
-    background: "var(--theme-forest)",
+    background: "var(--theme-tertiary)",
     height: "100%",
   },
   avatar: {
     display: "block",
     margin: "0.5rem auto",
+    marginTop: "2rem",
     width: theme.spacing(13),
     height: theme.spacing(15),
   },
   listItem: {
-    color: "var(--theme-coral)",
+    color: "white",
   },
 }));
 
@@ -58,6 +60,11 @@ const menuItems = [
     listIcon: <Apps />,
     listText: "Portfolio",
     listPath: "/portfolio",
+  },
+  {
+    listIcon: <School />,
+    listText: "Extracurriculars",
+    listPath: "/extracurriculars",
   },
   {
     listIcon: <ContactMail />,
@@ -107,13 +114,13 @@ const NavBar = () => {
   return (
     <>
       <Box component="nav">
-        <AppBar position="static" style={{ background: "#222" }}>
+        <AppBar position="static" style={{ background: "var(--theme-tertiary)" }}>
           <Toolbar>
             <IconButton onClick={toggleSlider("left", true)}>
-              <Menu style={{ color: "var(--theme-grey)" }} />
+              <Menu style={{ color: "white" }} />
             </IconButton>
-            <Typography variant="h5" style={{ color: "var(--theme-coral)" }}>
-              My Portfolio
+            <Typography variant="h5" style={{ color: "white" }}>
+              Amy Qian's Portfolio
             </Typography>
             <MobileRightMenuSlider
               anchor="left"

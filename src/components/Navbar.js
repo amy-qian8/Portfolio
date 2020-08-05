@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from 'react-router-dom'
+import { Link } from "react-router-dom";
 import { makeStyles } from "@material-ui/core/styles";
 import MobileRightMenuSlider from "@material-ui/core/Drawer";
 import Footer from "./Footer";
@@ -25,6 +25,7 @@ import {
   School,
 } from "@material-ui/icons";
 import avatar from "../avatar.png";
+import myinitialslogoImg from "../images/myinitialslogo.svg";
 
 // CSS STYLES
 const useStyles = makeStyles((theme) => ({
@@ -114,11 +115,19 @@ const NavBar = () => {
   return (
     <>
       <Box component="nav">
-        <AppBar position="static" style={{ background: "var(--theme-tertiary)" }}>
+        <AppBar
+          position="static"
+          style={{ background: "var(--theme-tertiary)" }}
+        >
           <Toolbar>
             <IconButton onClick={toggleSlider("left", true)}>
               <Menu style={{ color: "white" }} />
             </IconButton>
+            <img
+              alt="my initials logo"
+              src={myinitialslogoImg}
+              style={{ width: "3rem", margin: "0 0.5rem" }}
+            />
             <Typography variant="h5" style={{ color: "white" }}>
               Amy Qian's Portfolio
             </Typography>

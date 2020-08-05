@@ -15,7 +15,8 @@ import Navbar from "./Navbar";
 
 import SusCompImg from "../images/suslogo.svg";
 import CovidImg from "../images/covidlogo.png";
-import AvatarImg from "../avatar.png";
+// import AvatarImg from "../avatar.png";
+import myinitialslogoImg from "../images/myinitialslogo.svg";
 import SolidworksImg from "../images/solidworks.png";
 import MuddSubImg from "../images/muddsub.png";
 
@@ -166,7 +167,7 @@ const Portfolio = () => {
                 component="img"
                 alt="Project 3"
                 height="140"
-                image={AvatarImg}
+                image={myinitialslogoImg}
                 style={{
                   objectFit: "contain",
                   backgroundColor: "#c09bb8",

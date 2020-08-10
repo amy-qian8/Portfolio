@@ -243,11 +243,9 @@ const Portfolio = () => {
                   component="p"
                   className={classes.projectDescription}
                 >
-                  Excited to be able to join MuddSub as part of the mechanical
-                  design team and learn more about the engineering design
-                  process by CADing on Solidworks. We are currently designing a
-                  gripper to pick up game pieces in the underwater robotics
-                  competition hosted by RoboSub.
+                  My partner and I are currently designing a gripper to pick up
+                  game pieces in the underwater robotics competition hosted by
+                  RoboSub.
                 </Typography>
               </CardContent>
             </CardActionArea>

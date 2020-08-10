@@ -12,7 +12,6 @@
 }
 
 .title {
-  /* background: var(--theme-primary); */
   color: white;
   padding: 0.5rem 2rem;
   text-align: center;
@@ -22,13 +21,45 @@
   left: -20px;
   width: calc(100% + 40px);
 }
-.title:before,
-.title:after {
+
+/* DIFFERENT COLOR RIBBON SHADOW FOR EACH CARD */
+.swe:before,
+.swe:after {
   content: "";
   display: block;
   position: absolute;
-  border: 10px solid #000000;
+  border: 10px solid #431d3c;
 }
+.case:before,
+.case:after {
+  content: "";
+  display: block;
+  position: absolute;
+  border: 10px solid #0f3e3c;
+}
+.muddsub:before,
+.muddsub:after {
+  content: "";
+  display: block;
+  position: absolute;
+  border: 10px solid #02101c;
+}
+.apispam:before,
+.apispam:after {
+  content: "";
+  display: block;
+  position: absolute;
+  border: 10px solid #6b0714;
+}
+.intervarsity:before,
+.intervarsity:after {
+  content: "";
+  display: block;
+  position: absolute;
+  border: 10px solid #431d3c;
+}
+
+/* STYLES FOR ALL TITLES OF CARDS */
 .title:before {
   border-left-color: transparent;
   border-bottom-color: transparent;
@@ -43,11 +74,7 @@
 }
 
 .description {
-  margin-top: 1rem !important;
-}
-
-.button {
-  margin-top: 1rem;
+  margin: 1rem 0 !important;
 }
 
 /*** Media Queries ***/
@@ -55,10 +82,6 @@
   .card {
     margin-right: 30px;
     margin-left: 30px;
-  }
-  .button {
-    margin: 1rem;
-    margin-top: 0;
   }
 }
 
@@ -70,7 +93,6 @@
   }
 
   .title {
-    border-bottom: 1px solid darkred;
     padding: 20px;
     text-align: center;
     box-shadow: none;
@@ -91,5 +113,10 @@
   }
   .card > ul {
     padding: 0 20px 20px 50px;
+  }
+
+  .button {
+    margin: 1.5rem !important;
+    margin-top: -1rem !important;
   }
 }

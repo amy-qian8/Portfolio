@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { makeStyles } from "@material-ui/core/styles";
 import {
   Box,
@@ -56,7 +57,7 @@ const Portfolio = () => {
           <div className={`${styles.card} ${styles.longTitle}`}>
             <Typography
               variant="h5"
-              className={styles.title}
+              className={`${styles.title} ${styles.swe}`}
               style={{ backgroundColor: "var(--theme-primary)" }}
             >
               Co-President of Society of Women Engineers
@@ -69,10 +70,17 @@ const Portfolio = () => {
               I love SWE because of how we empower women to pursue engineering.
               We coordinate events with companies to host workshops on campus
               (and now virtually) like resume workshops, recruiting information
-              sessions, etc. We help send Mudd student to the National SWE
-              Conference. Also, we host WEST Conference for high school girls to
-              encourage girls to pursue a STEM major. I love leading a club that
-              has such a positive impact!
+              sessions, etc throughout the year, open to all majors and genders.
+              <br />
+              <br />
+              We are helping send 40+ Mudd students to the virtual National SWE
+              Conference this year (more than ever before!). Also in the spring,
+              we host WEST Conference for high school girls to encourage girls
+              to pursue a STEM major by listening to keynote speakers about
+              their experience in the tech industry, participating in engaging
+              workshops with Mudd Engineering Professors, and learning about
+              what's its like to be a student at Mudd. I love leading a club
+              that has such a positive impact!
             </Typography>
             <Button
               size="small"
@@ -94,7 +102,7 @@ const Portfolio = () => {
           <div className={styles.card}>
             <Typography
               variant="h5"
-              className={styles.title}
+              className={`${styles.title} ${styles.case}`}
               style={{ backgroundColor: "var(--theme-secondary)" }}
             >
               Case Dorm President
@@ -104,11 +112,23 @@ const Portfolio = () => {
               component="p"
               className={styles.description}
             >
-              I love being able to foster dorm culture among all the Case Dorm
-              residents especially during the pandemic while we are hosting most
-              events online. We lead dorm meetings and help plan dorm events
-              with Residential Life. Also, we attend ASHMC Senate Meetings,
-              discussing and voting on important topics like budget requests.
+              Loving my first year and feeling so welcomed by the Case
+              upperclassman, especially the Case Dorm Presidents, I decided to
+              become one this year! I love being able to foster dorm culture
+              among all the Case Dorm residents especially during the pandemic
+              while we are hosting most events online.
+              <br />
+              <br />
+              The 3 other Case Presidents and I lead dorm meetings and plan dorm
+              bonding events with Case Residential Life Proctor and Mentors.
+              Some activites we are planning on hosting this year include movie
+              nights and homework and tea time.
+              <br />
+              <br />
+              Also, we attend ASHMC Senate Meetings, discussing and voting on
+              important topics like budget requests. We always email meeting
+              summaries to our residents to make sure to keep them informed
+              about important updates and decisions the Senate makes.
             </Typography>
           </div>
         </Grid>
@@ -118,10 +138,55 @@ const Portfolio = () => {
           <div className={styles.card}>
             <Typography
               variant="h5"
-              className={styles.title}
+              className={`${styles.title} ${styles.muddsub}`}
               style={{ backgroundColor: "var(--theme-tertiary)" }}
             >
-              APISPAM Sponser
+              MuddSub Robotics
+            </Typography>
+            <Typography
+              variant="body2"
+              component="p"
+              className={styles.description}
+            >
+              MuddSub Robotics competes in the RoboSub competition. The goal is
+              for an Autonomous Underwater Vehicle (AUV) to demonstrate its
+              autonomy by completing underwater tasks like travelling through
+              gates and shooting a torpedo through a hoop.
+              <br />
+              <br />
+              I'm excited MuddSub as part of the mechanical design team and
+              learn more about the engineering design process by CADing on
+              Solidworks.
+              <br />
+              <br />
+              The upperclassmen mentor me and teach me design skills that aren't
+              taught in courses. Plus, it's more motivating to learn from
+              solving a real-world challenge than reading a textbook. Checkout
+              the gripper that been working on specifically in the "Portfolio"
+              tab!
+            </Typography>
+            <Button
+              size="small"
+              variant="contained"
+              component={Link}
+              to="/portfolio"
+              className={styles.button}
+              style={{ backgroundColor: "var(--theme-tertiary)", color: "white" }}
+            >
+              Gripper
+            </Button>
+          </div>
+        </Grid>
+
+        {/* Extracurricular 4 */}
+        <Grid item xs={12} sm={8} md={6}>
+          <div className={styles.card}>
+            <Typography
+              variant="h5"
+              className={`${styles.title} ${styles.apispam}`}
+              style={{ backgroundColor: "var(--theme-accent)" }}
+            >
+              APISPAM Mentor
             </Typography>
             <Typography
               variant="body2"
@@ -130,21 +195,24 @@ const Portfolio = () => {
             >
               APISPAM stands for Asian Pacific Islander Sponsor Program at Mudd,
               and is a peer mentoring program for new API students at Harvey
-              Mudd College. We serve as an additional resource for the freshmen
-              in helping them adjust to the HMC college experience, with an
+              Mudd College.
+              <br />
+              <br />
+              We, mentors, serve as an additional resource for the freshmen in
+              helping them adjust to the HMC college experience, with an
               emphasis on issues that intersect with Asian Pacific Islander Desi
               American identities.
             </Typography>
           </div>
         </Grid>
 
-        {/* Extracurricular 4 */}
+        {/* Extracurricular 5 */}
         <Grid item xs={12} sm={8} md={6}>
           <div className={`${styles.card} ${styles.longTitle}`}>
             <Typography
               variant="h5"
-              className={styles.title}
-              style={{ backgroundColor: "var(--theme-accent)" }}
+              className={`${styles.title} ${styles.intervarsity}`}
+              style={{ backgroundColor: "var(--theme-primary)" }}
             >
               5C InterVarsity Christian Fellowship
             </Typography>
@@ -153,9 +221,12 @@ const Portfolio = () => {
               component="p"
               className={styles.description}
             >
-              I found my family in Christ through 5CIV at the Claremont
+              Coming to college, I knew I wanted to join a Bible Study Small
+              Group! I found my family in Christ through 5CIV at the Claremont
               Colleges. I attend small group Bible study every week to study
-              God's word with a wonderful group of friends.
+              God's word with a wonderful group of friends. Being able to have
+              close friends to share our joys and challenges throughout the week
+              is crutial in college and beyond!
             </Typography>
           </div>
         </Grid>

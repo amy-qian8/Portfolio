@@ -112,7 +112,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const Resume = () => {
+const Work = () => {
   const classes = useStyles();
   return (
     <>
@@ -295,4 +295,4 @@ const Resume = () => {
   );
 };
 
-export default Resume;
+export default Work;

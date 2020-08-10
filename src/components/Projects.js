@@ -37,7 +37,7 @@ const useStyles = makeStyles({
   },
 });
 
-const Portfolio = () => {
+const Projects = () => {
   const classes = useStyles();
   return (
     <Box component="div" className={classes.mainContainer}>
@@ -341,4 +341,4 @@ const Portfolio = () => {
   );
 };
 
-export default Portfolio;
+export default Projects;

@@ -34,6 +34,16 @@ const useStyles = makeStyles((theme) => ({
     background: "var(--theme-tertiary)",
     height: "100%",
   },
+  titleBigScreen: {
+    [theme.breakpoints.down("xs")]: {
+      display: "none",
+    },
+  },
+  titleSmallScreen: {
+    [theme.breakpoints.up("sm")]: {
+      display: "none",
+    },
+  },
   avatar: {
     display: "block",
     margin: "0.5rem auto",
@@ -54,13 +64,13 @@ const menuItems = [
   },
   {
     listIcon: <AssignmentInd />,
-    listText: "Resume",
-    listPath: "/resume",
+    listText: "Work",
+    listPath: "/work",
   },
   {
     listIcon: <Apps />,
-    listText: "Portfolio",
-    listPath: "/portfolio",
+    listText: "Projects",
+    listPath: "/projects",
   },
   {
     listIcon: <School />,
@@ -128,8 +138,19 @@ const NavBar = () => {
               src={myinitialslogoImg}
               style={{ width: "3rem", margin: "0 0.5rem" }}
             />
-            <Typography variant="h5" style={{ color: "white" }}>
-              Amy Qian's Portfolio
+            <Typography
+              variant="h5"
+              className={classes.titleBigScreen}
+              style={{ color: "white" }}
+            >
+              Amy Qian's Website
+            </Typography>
+            <Typography
+              variant="h5"
+              className={classes.titleSmallScreen}
+              style={{ color: "white" }}
+            >
+              Amy Qian
             </Typography>
             <MobileRightMenuSlider
               anchor="left"

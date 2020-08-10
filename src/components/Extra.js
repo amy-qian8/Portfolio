@@ -3,17 +3,18 @@ import { makeStyles } from "@material-ui/core/styles";
 import {
   Box,
   Grid,
-  Card,
-  CardActionArea,
-  CardActions,
-  CardContent,
-  CardMedia,
+  // Card,
+  // CardActionArea,
+  // CardActions,
+  // CardContent,
+  // CardMedia,
   Button,
   Typography,
 } from "@material-ui/core";
 import Navbar from "./Navbar";
+import styles from "./Extra.module.css";
 
-import CaseDormImg from "../images/casedorm.jfif";
+// import CaseDormImg from "../images/casedorm.jfif";
 
 const useStyles = makeStyles((theme) => ({
   mainContainer: {
@@ -45,12 +46,122 @@ const useStyles = makeStyles((theme) => ({
 
 const Portfolio = () => {
   const classes = useStyles();
+
   return (
     <Box component="div" className={classes.mainContainer}>
       <Navbar />
       <Grid container justify="center" style={{ padding: "0 2rem" }}>
         {/* Extracurricular 1 */}
         <Grid item xs={12} sm={8} md={6}>
+          <div className={`${styles.card} ${styles.longTitle}`}>
+            <Typography
+              variant="h5"
+              className={styles.title}
+              style={{ backgroundColor: "var(--theme-primary)" }}
+            >
+              Co-President of Society of Women Engineers
+            </Typography>
+            <Typography
+              variant="body2"
+              component="p"
+              className={styles.description}
+            >
+              I love SWE because of how we empower women to pursue engineering.
+              We coordinate events with companies to host workshops on campus
+              (and now virtually) like resume workshops, recruiting information
+              sessions, etc. We help send Mudd student to the National SWE
+              Conference. Also, we host WEST Conference for high school girls to
+              encourage girls to pursue a STEM major. I love leading a club that
+              has such a positive impact!
+            </Typography>
+            <Button
+              size="small"
+              variant="contained"
+              color="primary"
+              onClick={() => {
+                window.location = "https://hmcswe.weebly.com/";
+                return null;
+              }}
+              className={styles.button}
+            >
+              Website
+            </Button>
+          </div>
+        </Grid>
+
+        {/* Extracurricular 2 */}
+        <Grid item xs={12} sm={8} md={6}>
+          <div className={styles.card}>
+            <Typography
+              variant="h5"
+              className={styles.title}
+              style={{ backgroundColor: "var(--theme-secondary)" }}
+            >
+              Case Dorm President
+            </Typography>
+            <Typography
+              variant="body2"
+              component="p"
+              className={styles.description}
+            >
+              I love being able to foster dorm culture among all the Case Dorm
+              residents especially during the pandemic while we are hosting most
+              events online. We lead dorm meetings and help plan dorm events
+              with Residential Life. Also, we attend ASHMC Senate Meetings,
+              discussing and voting on important topics like budget requests.
+            </Typography>
+          </div>
+        </Grid>
+
+        {/* Extracurricular 3 */}
+        <Grid item xs={12} sm={8} md={6}>
+          <div className={styles.card}>
+            <Typography
+              variant="h5"
+              className={styles.title}
+              style={{ backgroundColor: "var(--theme-tertiary)" }}
+            >
+              APISPAM Sponser
+            </Typography>
+            <Typography
+              variant="body2"
+              component="p"
+              className={styles.description}
+            >
+              APISPAM stands for Asian Pacific Islander Sponsor Program at Mudd,
+              and is a peer mentoring program for new API students at Harvey
+              Mudd College. We serve as an additional resource for the freshmen
+              in helping them adjust to the HMC college experience, with an
+              emphasis on issues that intersect with Asian Pacific Islander Desi
+              American identities.
+            </Typography>
+          </div>
+        </Grid>
+
+        {/* Extracurricular 4 */}
+        <Grid item xs={12} sm={8} md={6}>
+          <div className={`${styles.card} ${styles.longTitle}`}>
+            <Typography
+              variant="h5"
+              className={styles.title}
+              style={{ backgroundColor: "var(--theme-accent)" }}
+            >
+              5C InterVarsity Christian Fellowship
+            </Typography>
+            <Typography
+              variant="body2"
+              component="p"
+              className={styles.description}
+            >
+              I found my family in Christ through 5CIV at the Claremont
+              Colleges. I attend small group Bible study every week to study
+              God's word with a wonderful group of friends.
+            </Typography>
+          </div>
+        </Grid>
+
+        {/* Extracurricular 1 */}
+        {/* <Grid item xs={12} sm={8} md={6}>
           <Card className={classes.cardContainer}>
             <CardContent>
               <Typography variant="h5" className={classes.projectTitle}>
@@ -98,10 +209,10 @@ const Portfolio = () => {
               </Button>
             </CardActions>
           </Card>
-        </Grid>
+        </Grid> */}
 
         {/* Extracurricular 2 */}
-        <Grid item xs={12} sm={8} md={6}>
+        {/* <Grid item xs={12} sm={8} md={6}>
           <Card className={classes.cardContainer}>
             <CardContent>
               <Typography variant="h5" className={classes.projectTitle}>
@@ -133,10 +244,10 @@ const Portfolio = () => {
               </CardContent>
             </CardActionArea>
           </Card>
-        </Grid>
+        </Grid> */}
 
         {/* Extracurricular 3 */}
-        <Grid item xs={12} sm={8} md={6}>
+        {/* <Grid item xs={12} sm={8} md={6}>
           <Card className={classes.cardContainer}>
             <CardContent>
               <Typography variant="h5" className={classes.projectTitle}>
@@ -170,10 +281,10 @@ const Portfolio = () => {
               </CardContent>
             </CardActionArea>
           </Card>
-        </Grid>
+        </Grid> */}
 
         {/* Extracurricular 4 */}
-        <Grid item xs={12} sm={8} md={6}>
+        {/* <Grid item xs={12} sm={8} md={6}>
           <Card className={classes.cardContainer}>
             <CardContent>
               <Typography variant="h5" className={classes.projectTitle}>
@@ -204,7 +315,7 @@ const Portfolio = () => {
               </CardContent>
             </CardActionArea>
           </Card>
-        </Grid>
+        </Grid> */}
       </Grid>
     </Box>
   );

@@ -120,8 +120,8 @@ const NavBar = () => {
           style={{ background: "var(--theme-tertiary)" }}
         >
           <Toolbar>
-            <IconButton onClick={toggleSlider("left", true)}>
-              <Menu style={{ color: "white" }} />
+            <IconButton aria-label="menu" onClick={toggleSlider("left", true)}>
+              <Menu aria-label="menu" style={{ color: "white" }} />
             </IconButton>
             <img
               alt="my initials logo"

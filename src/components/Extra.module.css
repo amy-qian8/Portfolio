@@ -1,0 +1,95 @@
+.card {
+  background: #e5e5e5;
+  margin: 5rem auto;
+  padding: 65px 20px 20px;
+  position: relative;
+  max-width: 345px;
+  box-shadow: 0 2px 10px #666;
+}
+
+.longTitle {
+  padding: 100px 20px 20px;
+}
+
+.title {
+  /* background: var(--theme-primary); */
+  color: white;
+  padding: 0.5rem 2rem;
+  text-align: center;
+  box-shadow: 0 1px 1px #666;
+  position: absolute;
+  top: 1rem;
+  left: -20px;
+  width: calc(100% + 40px);
+}
+.title:before,
+.title:after {
+  content: "";
+  display: block;
+  position: absolute;
+  border: 10px solid #000000;
+}
+.title:before {
+  border-left-color: transparent;
+  border-bottom-color: transparent;
+  left: 0;
+  bottom: -20px;
+}
+.title:after {
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+  right: 0;
+  bottom: -20px;
+}
+
+.description {
+  margin-top: 1rem !important;
+}
+
+.button {
+  margin-top: 1rem;
+}
+
+/*** Media Queries ***/
+@media screen and (max-width: 660px) {
+  .card {
+    margin-right: 30px;
+    margin-left: 30px;
+  }
+  .button {
+    margin: 1rem;
+    margin-top: 0;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .card {
+    margin-right: 20px;
+    margin-left: 20px;
+    padding: 0;
+  }
+
+  .title {
+    border-bottom: 1px solid darkred;
+    padding: 20px;
+    text-align: center;
+    box-shadow: none;
+    position: static;
+    top: auto;
+    left: auto;
+    width: auto;
+  }
+
+  .title:before,
+  .title:after {
+    display: none;
+  }
+
+  .card > p {
+    padding: 1.5rem;
+    padding-top: 0;
+  }
+  .card > ul {
+    padding: 0 20px 20px 50px;
+  }
+}

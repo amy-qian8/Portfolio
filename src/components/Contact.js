@@ -107,7 +107,7 @@ const Contact = () => {
           message: formData.message,
           time: new Date(),
         });
-        handleClick()
+        handleClick();
       })
       .catch((error) => {
         console.log(error);
@@ -141,8 +141,8 @@ const Contact = () => {
             }}
           >
             I'm currently searching for a Summer 2021 Internship in mechanical
-            engineering. Feel free to fill out this form or email me at
-            aqian@g.hmc.edu.
+            engineering. Feel free to fill out this form or email me at&nbsp;
+            <a href="mailto: @aqian@g.hmc.edu">aqian@g.hmc.edu</a>.
           </Typography>
           <form onSubmit={handleSubmit} id="contact" className={classes.form}>
             <TextField

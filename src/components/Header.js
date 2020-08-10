@@ -12,11 +12,12 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: "1rem",
   },
   title: {
-    color: "var(--theme-secondary)",
+    color: "white",
     fontWeight: "bold",
   },
   subtitle: {
-    color: "var(--theme-accent)",
+    color: "var(--theme-primary)",
+    textShadow: "2px 2px 3px black",
     marginBottom: "3rem",
     fontWeight: "bold",
   },

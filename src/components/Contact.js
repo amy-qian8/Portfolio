@@ -30,15 +30,15 @@ const useStyles = makeStyles((theme) => ({
     margin: "auto",
   },
   formWrapper: {
-    marginTop: theme.spacing(3),
-    marginBottom: theme.spacing(3),
+    // marginTop: theme.spacing(3),
+    // marginBottom: theme.spacing(3),
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
     padding: "0.5rem 2rem",
   },
   avatar: {
-    marginTop: theme.spacing(2),
+    marginTop: theme.spacing(1),
     backgroundColor: "var(--theme-primary)",
   },
   form: {
@@ -125,9 +125,7 @@ const Contact = () => {
           <Typography
             variant="h4"
             style={{
-              margin: "1rem 0",
-              // color: "var(--theme-accent)",
-              // fontWeight: "bold",
+              margin: "0.5rem 0",
             }}
           >
             Contact Me
@@ -214,7 +212,7 @@ const Contact = () => {
               style={{
                 backgroundColor: "var(--theme-primary)",
                 color: "white",
-                margin: "1.5rem 0",
+                margin: "1rem 0",
               }}
               endIcon={<SendIcon />}
             >

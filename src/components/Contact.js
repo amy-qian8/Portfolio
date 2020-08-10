@@ -28,6 +28,10 @@ const useStyles = makeStyles((theme) => ({
     maxWidth: "35rem",
     marginTop: theme.spacing(4),
     margin: "auto",
+    backgroundColor: "#e1e4e6",
+    [theme.breakpoints.down('xs')]:{
+      margin: "auto"
+    }
   },
   formWrapper: {
     // marginTop: theme.spacing(3),

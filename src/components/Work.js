@@ -36,10 +36,12 @@ const useStyles = makeStyles((theme) => ({
   },
   timeLineItem: {
     padding: "1rem",
-    borderBottom: "3px solid var(--theme-tertiary)",
+    border: "3px solid var(--theme-tertiary)",
     position: "relative",
     margin: "1rem 3rem 3rem 1rem",
     clear: "both",
+    backgroundColor: "#e1e4e6",
+    borderRadius: "5px",
     "&:after": {
       content: "''",
       position: "absolute",
@@ -51,7 +53,7 @@ const useStyles = makeStyles((theme) => ({
       top: "calc(50% - 1px)",
       borderStyle: "solid",
       borderColor:
-        "var(--theme-accent) var(--theme-accent) transparent transparent",
+        "var(--theme-tertiary) var(--theme-tertiary) transparent transparent",
       borderWidth: "0.625rem",
       transform: "rotate(45deg)",
     },
@@ -69,7 +71,7 @@ const useStyles = makeStyles((theme) => ({
         right: "auto",
         left: "-0.625rem",
         borderColor:
-          "transparent transparent var(--theme-accent) var(--theme-accent)",
+          "transparent transparent var(--theme-tertiary) var(--theme-tertiary)",
       },
     },
   },
@@ -82,6 +84,7 @@ const useStyles = makeStyles((theme) => ({
     color: "white",
     lineHeight: "1",
     padding: "0.5rem 0 1rem",
+    borderRadius: "5px",
     "&:before": {
       display: "none",
     },

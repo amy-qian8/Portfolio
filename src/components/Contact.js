@@ -29,9 +29,9 @@ const useStyles = makeStyles((theme) => ({
     marginTop: theme.spacing(4),
     margin: "auto",
     backgroundColor: "#e1e4e6",
-    [theme.breakpoints.down('xs')]:{
-      margin: "auto"
-    }
+    [theme.breakpoints.down("xs")]: {
+      margin: "auto",
+    },
   },
   formWrapper: {
     // marginTop: theme.spacing(3),
@@ -142,8 +142,9 @@ const Contact = () => {
               // fontWeight: "bold",
             }}
           >
-            I'm currently searching for a Summer 2021 Internship in mechanical
-            engineering. Feel free to fill out this form or email me at&nbsp;
+            I'm currently searching for an engineering or computer science
+            related Summer 2021 Internship. Feel free to fill out this form or
+            email me at&nbsp;
             <a href="mailto: @aqian@g.hmc.edu">aqian@g.hmc.edu</a>.
           </Typography>
           <form onSubmit={handleSubmit} id="contact" className={classes.form}>

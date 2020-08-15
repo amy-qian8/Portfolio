@@ -13,6 +13,11 @@ import {
 } from "@material-ui/core";
 import Navbar from "./Navbar";
 
+// imports for gridlist
+import GridList from "@material-ui/core/GridList";
+import GridListTile from "@material-ui/core/GridListTile";
+import ScreenshotData from "./ScreenshotData";
+
 import SusCompImg from "../images/suslogo.svg";
 import CovidImg from "../images/covidlogo.png";
 // import AvatarImg from "../avatar.png";
@@ -20,7 +25,7 @@ import myinitialslogoImg from "../images/myinitialslogo.svg";
 import SolidworksImg from "../images/solidworks.png";
 import MuddSubImg from "../images/muddsub.png";
 
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme) => ({
   mainContainer: {
     background: "var(--theme-bg)",
     height: "100%",
@@ -35,7 +40,31 @@ const useStyles = makeStyles({
   projectDescription: {
     fontWeight: "bold",
   },
-});
+  //styles for gridlist of app store screenshots of EcoBud
+  screenshotWrapper: {
+    display: "flex",
+    flexWrap: "wrap",
+    justifyContent: "space-around",
+    overflow: "hidden",
+    backgroundColor: "transparent",
+    // backgroundColor: theme.palette.background.paper,
+  },
+  gridList: {
+    flexWrap: "nowrap",
+    transform: "translateZ(0)",
+  },
+  title: {
+    color: theme.palette.primary.light,
+  },
+  titleBar: {
+    background:
+      "linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.3) 70%, rgba(0,0,0,0) 100%)",
+  },
+  screenshotImg: {
+    height: "inherit",
+    width: "inherit",
+  },
+}));
 
 const Projects = () => {
   const classes = useStyles();
@@ -44,62 +73,112 @@ const Projects = () => {
       <Navbar />
       <Grid container justify="center">
         {/* Project 1 */}
-        <Grid item xs={12} sm={8} md={6}>
-          <Card className={classes.cardContainer}>
-            <CardActionArea>
-              <CardMedia
-                component="img"
-                alt="Project 1"
-                height="140"
-                image={SusCompImg}
-                style={{ objectFit: "contain", backgroundColor: "#c0f1c5" }}
-              />
-              <CardContent>
-                <Typography
-                  gutterBottom
-                  variant="h5"
-                  className={classes.projectTitle}
+        <Grid container justify="center">
+          <Grid item xs={12} sm={8} md={6}>
+            <Card
+              className={classes.cardContainer}
+              style={{ maxWidth: "800px" }}
+            >
+              <CardActionArea>
+                <CardMedia
+                  component="img"
+                  alt="Project 1"
+                  height="140"
+                  image={SusCompImg}
+                  style={{ objectFit: "contain", backgroundColor: "#c0f1c5" }}
+                />
+                <CardContent>
+                  <Typography
+                    gutterBottom
+                    variant="h5"
+                    className={classes.projectTitle}
+                  >
+                    Sustainability Competition Progressive Web App
+                  </Typography>
+                  <Typography
+                    variant="body2"
+                    color="textSecondary"
+                    component="p"
+                    className={classes.projectDescription}
+                  >
+                    EcoBud is a progressive web app that supports college dorm
+                    sustainability competitions. Our goal is to allow college
+                    students to develop environmentally friendly habits while
+                    providing motivation through competing against friends and
+                    real-life rewards. Working with 4 other Mudders over 10
+                    weeks over the Summer of 2020, we used React JS, Firebase,
+                    and Material UI in our project. I worked mostly on frontend,
+                    focusing on UI/UX design. Below are some screenshots of the
+                    main features of EcoBud.
+                  </Typography>
+                </CardContent>
+              </CardActionArea>
+              <CardActions>
+                <Button
+                  size="small"
+                  color="primary"
+                  onClick={() => {
+                    window.location = "http://ecobud.app/";
+                    return null;
+                  }}
                 >
-                  Sustainability Competition Progressive Web App
-                </Typography>
-                <Typography
-                  variant="body2"
-                  color="textSecondary"
-                  component="p"
-                  className={classes.projectDescription}
+                  Live Demo
+                </Button>
+                <Button
+                  size="small"
+                  color="primary"
+                  onClick={() => {
+                    window.location =
+                      "https://github.com/2020summerstartup/sustainability";
+                    return null;
+                  }}
                 >
-                  Working with 4 other Mudders over 10 weeks over the Summer of
-                  2020, we develeped a PWA for Harvey Mudd's Sustainability
-                  Clubs to hold dorm competitions to foster eco-friendly habits
-                  on our campus. We used React JS, Firebase, and Material UI in
-                  our project. I worked mostly on frontend!
-                </Typography>
-              </CardContent>
-            </CardActionArea>
-            <CardActions>
-              <Button
-                size="small"
-                color="primary"
-                onClick={() => {
-                  window.location =
-                    "https://github.com/2020summerstartup/sustainability";
-                  return null;
-                }}
-              >
-                Github Repo
-              </Button>
-              <Button
-                size="small"
-                color="primary"
-                onClick={() => {
-                  window.location = "http://ecobud.app/";
-                  return null;
-                }}
-              >
-                Live Demo
-              </Button>
-            </CardActions>
-          </Card>
+                  Github Repo
+                </Button>
+                <Button
+                  size="small"
+                  color="primary"
+                  // onClick={() => {
+                  //   window.location = "documents/EcoBudPoster.pdf";
+                  //   return null;
+                  // }}
+                >
+                  {/* Poster */}
+                  <a href="documents/EcoBudPoster.pdf">Poster</a>
+                </Button>
+                <Button
+                  size="small"
+                  color="primary"
+                  onClick={() => {
+                    window.location = "https://www.linkedin.com/company/hmcecobud";
+                    return null;
+                  }}
+                >
+                  LinkedIn
+                </Button>
+              </CardActions>
+            </Card>
+          </Grid>
+
+          {/* GridList for AppStore Screenshots of App */}
+          <Grid item xs={12} sm={8}>
+            <div className={classes.screenshotWrapper}>
+              <GridList className={classes.gridList} cols={2} cellHeight="500">
+                {ScreenshotData.map((screenshot) => (
+                  <GridListTile
+                    key={screenshot.title}
+                    style={{ width: "auto" }}
+                  >
+                    <img
+                      src={screenshot.img}
+                      alt={screenshot.title}
+                      className={classes.screenshotImg}
+                    />
+                  </GridListTile>
+                ))}
+              </GridList>
+            </div>
+          </Grid>
         </Grid>
 
         {/* Project 2 */}

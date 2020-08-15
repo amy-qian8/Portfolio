@@ -92,8 +92,7 @@ const Projects = () => {
                 size="small"
                 color="primary"
                 onClick={() => {
-                  window.location =
-                    "http://sustainability-competition.netlify.app/";
+                  window.location = "http://ecobud.app/";
                   return null;
                 }}
               >
@@ -102,6 +101,7 @@ const Projects = () => {
             </CardActions>
           </Card>
         </Grid>
+
         {/* Project 2 */}
         <Grid item xs={12} sm={8} md={6}>
           <Card className={classes.cardContainer}>
@@ -159,6 +159,7 @@ const Projects = () => {
             </CardActions>
           </Card>
         </Grid>
+
         {/* Project 3 */}
         <Grid item xs={12} sm={8} md={6}>
           <Card className={classes.cardContainer}>
@@ -209,7 +210,7 @@ const Projects = () => {
                 size="small"
                 color="primary"
                 onClick={() => {
-                  window.location = "http://amyqian.netlify.app/";
+                  window.location = "https://myportfolio-7f381.web.app/";
                   return null;
                 }}
               >
@@ -218,6 +219,7 @@ const Projects = () => {
             </CardActions>
           </Card>
         </Grid>
+
         {/* Project 4 */}
         <Grid item xs={12} sm={8} md={6}>
           <Card className={classes.cardContainer}>
@@ -275,6 +277,7 @@ const Projects = () => {
             </CardActions>
           </Card>
         </Grid>
+
         {/* Project 5 */}
         <Grid item xs={12} sm={8} md={6}>
           <Card className={classes.cardContainer}>

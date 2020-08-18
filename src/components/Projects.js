@@ -138,19 +138,20 @@ const Projects = () => {
                 <Button
                   size="small"
                   color="primary"
-                  // onClick={() => {
-                  //   window.location = "documents/EcoBudPoster.pdf";
-                  //   return null;
-                  // }}
+                  onClick={() => {
+                    window.location =
+                      "https://drive.google.com/file/d/1T3XSYBylfWAzB2Ok8hNUsBUSm7043s22/view";
+                    return null;
+                  }}
                 >
-                  {/* Poster */}
-                  <a href="documents/EcoBudPoster.pdf">Poster</a>
+                  Poster
                 </Button>
                 <Button
                   size="small"
                   color="primary"
                   onClick={() => {
-                    window.location = "https://www.linkedin.com/company/hmcecobud";
+                    window.location =
+                      "https://www.linkedin.com/company/hmcecobud";
                     return null;
                   }}
                 >
@@ -160,7 +161,7 @@ const Projects = () => {
             </Card>
           </Grid>
 
-          {/* GridList for AppStore Screenshots of App */}
+          {/* GridList for AppStore Screenshots of EcoBud */}
           <Grid item xs={12} sm={8}>
             <div className={classes.screenshotWrapper}>
               <GridList className={classes.gridList} cols={2} cellHeight="500">
@@ -182,124 +183,6 @@ const Projects = () => {
         </Grid>
 
         {/* Project 2 */}
-        <Grid item xs={12} sm={8} md={6}>
-          <Card className={classes.cardContainer}>
-            <CardActionArea>
-              <CardMedia
-                component="img"
-                alt="Project 2"
-                height="140"
-                image={CovidImg}
-                style={{ objectFit: "contain", backgroundColor: "#f7c3c4" }}
-              />
-              <CardContent>
-                <Typography
-                  gutterBottom
-                  variant="h5"
-                  className={classes.projectTitle}
-                >
-                  COVID-19 Tracker
-                </Typography>
-                <Typography
-                  variant="body2"
-                  color="textSecondary"
-                  component="p"
-                  className={classes.projectDescription}
-                >
-                  During this COVID-19 crisis, I created this personal project
-                  following a Youtube Tutorial. In this React JS Application, I
-                  used an API to fetch data and presents the data with numbers
-                  and charts/graphs.
-                </Typography>
-              </CardContent>
-            </CardActionArea>
-            <CardActions>
-              <Button
-                size="small"
-                color="primary"
-                onClick={() => {
-                  window.location =
-                    "https://github.com/amy-qian8/Covid19-Tracker";
-                  return null;
-                }}
-              >
-                Github Repo
-              </Button>
-              <Button
-                size="small"
-                color="primary"
-                onClick={() => {
-                  window.location = "https://my-covid19-tracker.netlify.app/";
-                  return null;
-                }}
-              >
-                Live Demo
-              </Button>
-            </CardActions>
-          </Card>
-        </Grid>
-
-        {/* Project 3 */}
-        <Grid item xs={12} sm={8} md={6}>
-          <Card className={classes.cardContainer}>
-            <CardActionArea>
-              <CardMedia
-                component="img"
-                alt="Project 3"
-                height="140"
-                image={myinitialslogoImg}
-                style={{
-                  objectFit: "contain",
-                  backgroundColor: "#c09bb8",
-                }}
-              />
-              <CardContent>
-                <Typography
-                  gutterBottom
-                  variant="h5"
-                  className={classes.projectTitle}
-                >
-                  My Portfolio
-                </Typography>
-                <Typography
-                  variant="body2"
-                  color="textSecondary"
-                  component="p"
-                  className={classes.projectDescription}
-                >
-                  I created this website, my portfolio with React JS and
-                  Material UI. Using my skills I've learned from create the PWA,
-                  I wanted to showcase my experiences and projects on a website!
-                  Check it out on mobile too, it's responsive!
-                </Typography>
-              </CardContent>
-            </CardActionArea>
-            <CardActions>
-              <Button
-                size="small"
-                color="primary"
-                onClick={() => {
-                  window.location = "https://github.com/amy-qian8/Portfolio";
-                  return null;
-                }}
-              >
-                Github Repo
-              </Button>
-              <Button
-                size="small"
-                color="primary"
-                onClick={() => {
-                  window.location = "https://myportfolio-7f381.web.app/";
-                  return null;
-                }}
-              >
-                Live Demo
-              </Button>
-            </CardActions>
-          </Card>
-        </Grid>
-
-        {/* Project 4 */}
         <Grid item xs={12} sm={8} md={6}>
           <Card className={classes.cardContainer}>
             <CardActionArea>
@@ -357,7 +240,7 @@ const Projects = () => {
           </Card>
         </Grid>
 
-        {/* Project 5 */}
+        {/* Project 3 */}
         <Grid item xs={12} sm={8} md={6}>
           <Card className={classes.cardContainer}>
             <CardActionArea>
@@ -410,6 +293,124 @@ const Projects = () => {
                 onClick={() => {
                   window.location =
                     "http://sustainability-competition.netlify.app/";
+                  return null;
+                }}
+              >
+                Live Demo
+              </Button>
+            </CardActions>
+          </Card>
+        </Grid>
+
+        {/* Project 4 */}
+        <Grid item xs={12} sm={8} md={6}>
+          <Card className={classes.cardContainer}>
+            <CardActionArea>
+              <CardMedia
+                component="img"
+                alt="Project 2"
+                height="140"
+                image={CovidImg}
+                style={{ objectFit: "contain", backgroundColor: "#f7c3c4" }}
+              />
+              <CardContent>
+                <Typography
+                  gutterBottom
+                  variant="h5"
+                  className={classes.projectTitle}
+                >
+                  COVID-19 Tracker
+                </Typography>
+                <Typography
+                  variant="body2"
+                  color="textSecondary"
+                  component="p"
+                  className={classes.projectDescription}
+                >
+                  During this COVID-19 crisis, I created this personal project
+                  following a Youtube Tutorial. In this React JS Application, I
+                  used an API to fetch data and presents the data with numbers
+                  and charts/graphs.
+                </Typography>
+              </CardContent>
+            </CardActionArea>
+            <CardActions>
+              <Button
+                size="small"
+                color="primary"
+                onClick={() => {
+                  window.location =
+                    "https://github.com/amy-qian8/Covid19-Tracker";
+                  return null;
+                }}
+              >
+                Github Repo
+              </Button>
+              <Button
+                size="small"
+                color="primary"
+                onClick={() => {
+                  window.location = "https://my-covid19-tracker.netlify.app/";
+                  return null;
+                }}
+              >
+                Live Demo
+              </Button>
+            </CardActions>
+          </Card>
+        </Grid>
+
+        {/* Project 5 */}
+        <Grid item xs={12} sm={8} md={6}>
+          <Card className={classes.cardContainer}>
+            <CardActionArea>
+              <CardMedia
+                component="img"
+                alt="Project 3"
+                height="140"
+                image={myinitialslogoImg}
+                style={{
+                  objectFit: "contain",
+                  backgroundColor: "#c09bb8",
+                }}
+              />
+              <CardContent>
+                <Typography
+                  gutterBottom
+                  variant="h5"
+                  className={classes.projectTitle}
+                >
+                  My Portfolio
+                </Typography>
+                <Typography
+                  variant="body2"
+                  color="textSecondary"
+                  component="p"
+                  className={classes.projectDescription}
+                >
+                  I created this website, my portfolio with React JS and
+                  Material UI. Using my skills I've learned from create the PWA,
+                  I wanted to showcase my experiences and projects on a website!
+                  Check it out on mobile too, it's responsive!
+                </Typography>
+              </CardContent>
+            </CardActionArea>
+            <CardActions>
+              <Button
+                size="small"
+                color="primary"
+                onClick={() => {
+                  window.location = "https://github.com/amy-qian8/Portfolio";
+                  return null;
+                }}
+              >
+                Github Repo
+              </Button>
+              <Button
+                size="small"
+                color="primary"
+                onClick={() => {
+                  window.location = "https://myportfolio-7f381.web.app/";
                   return null;
                 }}
               >

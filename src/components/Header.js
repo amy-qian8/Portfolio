@@ -2,7 +2,8 @@ import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import { Typography, Avatar, Grid, Box } from "@material-ui/core";
 import Typed from "react-typed";
-import avatar from "../avatar.png";
+import MeImg from "../me.png";
+// import avatar from "../avatar.png";
 
 // CSS STYLES
 const useStyles = makeStyles((theme) => ({
@@ -10,6 +11,12 @@ const useStyles = makeStyles((theme) => ({
     width: theme.spacing(15),
     height: theme.spacing(18),
     marginBottom: "1rem",
+  },
+  profilePic: {
+    width: "10rem",
+    height: "10rem",
+    marginBottom: "1rem",
+    border: "5px solid var(--theme-primary)",
   },
   title: {
     color: "white",
@@ -29,7 +36,7 @@ const useStyles = makeStyles((theme) => ({
     width: "100%",
     textAlign: "center",
     zIndex: 1,
-    padding: "0 1rem"
+    padding: "0 1rem",
   },
 }));
 
@@ -38,7 +45,7 @@ const Header = () => {
   return (
     <Box className={classes.typedContainer}>
       <Grid container justify="center">
-        <Avatar className={classes.avatar} src={avatar} alt="Amy Qian" />
+          <Avatar className={classes.profilePic} src={MeImg} alt="Amy Qian" />
       </Grid>
       <Typography className={classes.title} variant="h4">
         <Typed strings={["Amy Qian"]} typeSpeed={40} />

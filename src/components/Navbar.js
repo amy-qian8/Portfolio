@@ -24,7 +24,7 @@ import {
   ContactMail,
   School,
 } from "@material-ui/icons";
-import avatar from "../avatar.png";
+// import avatar from "../avatar.png";
 import myinitialslogoImg from "../images/myinitialslogo.svg";
 
 // CSS STYLES
@@ -35,11 +35,15 @@ const useStyles = makeStyles((theme) => ({
     height: "100%",
   },
   titleBigScreen: {
+    color: "white",
+    margin: "auto",
     [theme.breakpoints.down("xs")]: {
       display: "none",
     },
   },
   titleSmallScreen: {
+    color: "white",
+    margin: "auto",
     [theme.breakpoints.up("sm")]: {
       display: "none",
     },
@@ -49,6 +53,13 @@ const useStyles = makeStyles((theme) => ({
     margin: "0.5rem auto",
     marginTop: "2rem",
     width: theme.spacing(13),
+    height: theme.spacing(15),
+  },
+  logo: {
+    display: "block",
+    margin: "0.5rem auto",
+    marginTop: "2rem",
+    width: theme.spacing(15),
     height: theme.spacing(15),
   },
   listItem: {
@@ -101,7 +112,7 @@ const NavBar = () => {
       component="div"
       onClick={toggleSlider(slider, false)}
     >
-      <Avatar className={classes.avatar} src={avatar} alt="Amy Qian" />
+      <Avatar className={classes.logo} src={myinitialslogoImg} alt="Amy Qian" />
       <Divider />
       <List>
         {menuItems.map((listItem, key) => (
@@ -133,25 +144,27 @@ const NavBar = () => {
             <IconButton aria-label="menu" onClick={toggleSlider("left", true)}>
               <Menu aria-label="menu" style={{ color: "white" }} />
             </IconButton>
-            <img
-              alt="my initials logo"
-              src={myinitialslogoImg}
-              style={{ width: "3rem", margin: "0 0.5rem" }}
-            />
-            <Typography
-              variant="h5"
-              className={classes.titleBigScreen}
-              style={{ color: "white" }}
+
+            <Link
+              to={"/"}
+              style={{
+                textDecoration: "none",
+                display: "flex",
+              }}
             >
-              Amy Qian's Website
-            </Typography>
-            <Typography
-              variant="h5"
-              className={classes.titleSmallScreen}
-              style={{ color: "white" }}
-            >
-              Amy Qian
-            </Typography>
+              <img
+                alt="my initials logo"
+                src={myinitialslogoImg}
+                style={{ width: "3rem", margin: "0 0.5rem" }}
+              />
+              <Typography variant="h5" className={classes.titleBigScreen}>
+                Amy Qian's Website
+              </Typography>
+              <Typography variant="h5" className={classes.titleSmallScreen}>
+                Amy Qian
+              </Typography>
+            </Link>
+
             <MobileRightMenuSlider
               anchor="left"
               open={state.left}

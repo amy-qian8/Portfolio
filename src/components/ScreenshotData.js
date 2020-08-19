@@ -4,7 +4,14 @@ import Slide3 from "../images/Slide3.JPG";
 import Slide4 from "../images/Slide4.JPG";
 import Slide5 from "../images/Slide5.JPG";
 
-const ScreenshotData = [
+import GripperDimetricImg from "../images/GripperDimetric.png";
+import GripperFrontImg from "../images/GripperFront.png";
+
+import iPhoneXImg from "../images/iPhoneX.png";
+import HouseImg from "../images/House.png";
+import HammerImg from "../images/Hammer.png";
+
+const EcoBudScreenshotData = [
   {
     img: Slide1,
     title: "EcoBud",
@@ -27,4 +34,31 @@ const ScreenshotData = [
   },
 ];
 
-export default ScreenshotData;
+const GripperScreenshotData = [
+  {
+    img: GripperDimetricImg,
+    title: "Gripper",
+  },
+  {
+    img: GripperFrontImg,
+    title: "Front View",
+  },
+];
+
+const SolidworksScreenshotData = [
+  {
+    img: iPhoneXImg,
+    title: "iPhoneX",
+  },
+  {
+    img: HouseImg,
+    title: "House",
+  },
+  {
+    img: HammerImg,
+    title: "Hammer",
+  },
+];
+
+export default EcoBudScreenshotData;
+export { GripperScreenshotData, SolidworksScreenshotData };

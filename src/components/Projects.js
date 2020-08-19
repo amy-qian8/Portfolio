@@ -15,7 +15,10 @@ import Navbar from "./Navbar";
 // imports for gridlist
 import GridList from "@material-ui/core/GridList";
 import GridListTile from "@material-ui/core/GridListTile";
-import ScreenshotData from "./ScreenshotData";
+import EcoBudScreenshotData, {
+  GripperScreenshotData,
+  SolidworksScreenshotData,
+} from "./ScreenshotData";
 
 import SusCompImg from "../images/suslogo.svg";
 import CovidImg from "../images/covidlogo.png";
@@ -157,7 +160,7 @@ const Projects = () => {
           <Grid item xs={12} sm={8}>
             <div className={classes.screenshotWrapper}>
               <GridList className={classes.gridList} cols={2} cellHeight="500">
-                {ScreenshotData.map((screenshot) => (
+                {EcoBudScreenshotData.map((screenshot) => (
                   <GridListTile
                     key={screenshot.title}
                     style={{ width: "auto" }}
@@ -175,52 +178,56 @@ const Projects = () => {
         </Grid>
 
         {/* Project 2 */}
-        <Grid item xs={12} sm={8} md={6}>
-          <Card className={classes.cardContainer}>
-            <CardMedia
-              component="img"
-              alt="Project 4"
-              height="140"
-              image={MuddSubImg}
-              style={{ objectFit: "contain", backgroundColor: "#f1cb69" }}
-            />
-            <CardContent>
-              <Typography
-                gutterBottom
-                variant="h5"
-                className={classes.projectTitle}
-              >
-                MuddSub Robotics Club
-              </Typography>
-              <Typography
-                variant="body2"
-                color="textSecondary"
-                component="p"
-                className={classes.projectDescription}
-              >
-                MuddSub Robotics competes in the RoboSub competition. The goal
-                is for an Autonomous Underwater Vehicle (AUV) to demonstrate its
-                autonomy by completing underwater tasks like travelling through
-                gates and shooting a torpedo through a hoop.
-                <br />
-                My partner and I are currently designing a gripper to pick up
-                game pieces in the underwater robotics competition hosted by
-                RoboSub.
-              </Typography>
-            </CardContent>
-            <CardActions>
-              <Button
-                size="small"
-                color="primary"
-                onClick={() =>
-                  window.open(
-                    "https://github.com/2020summerstartup/sustainability"
-                  )
-                }
-              >
-                Solidworks
-              </Button>
-              <Button
+        <Grid container justify="center">
+          <Grid item xs={12} sm={8} md={6}>
+            <Card
+              className={classes.cardContainer}
+              style={{ maxWidth: "800px" }}
+            >
+              <CardMedia
+                component="img"
+                alt="Project 4"
+                height="140"
+                image={MuddSubImg}
+                style={{ objectFit: "contain", backgroundColor: "#f1cb69" }}
+              />
+              <CardContent>
+                <Typography
+                  gutterBottom
+                  variant="h5"
+                  className={classes.projectTitle}
+                >
+                  MuddSub Robotics Club
+                </Typography>
+                <Typography
+                  variant="body2"
+                  color="textSecondary"
+                  component="p"
+                  className={classes.projectDescription}
+                >
+                  MuddSub Robotics competes in the RoboSub competition. The goal
+                  is for an Autonomous Underwater Vehicle (AUV) to demonstrate
+                  its autonomy by completing underwater tasks like travelling
+                  through gates and shooting a torpedo through a hoop.
+                  <br />
+                  My partner and I are currently designing a gripper to pick up
+                  game pieces in the underwater robotics competition hosted by
+                  RoboSub.
+                </Typography>
+              </CardContent>
+              <CardActions>
+                <Button
+                  size="small"
+                  color="primary"
+                  onClick={() =>
+                    window.open(
+                      "https://github.com/2020summerstartup/sustainability"
+                    )
+                  }
+                >
+                  Solidworks
+                </Button>
+                {/* <Button
                 size="small"
                 color="primary"
                 onClick={() =>
@@ -228,57 +235,79 @@ const Projects = () => {
                 }
               >
                 Live Demo
-              </Button>
-            </CardActions>
-          </Card>
+              </Button> */}
+              </CardActions>
+            </Card>
+          </Grid>
+
+          {/* GridList for Screenshots of Gripper */}
+          <Grid item xs={12} sm={8}>
+            <div className={classes.screenshotWrapper}>
+              <GridList className={classes.gridList} cols={2} cellHeight="500">
+                {GripperScreenshotData.map((screenshot) => (
+                  <GridListTile
+                    key={screenshot.title}
+                    style={{ width: "auto" }}
+                  >
+                    <img
+                      src={screenshot.img}
+                      alt={screenshot.title}
+                      className={classes.screenshotImg}
+                    />
+                  </GridListTile>
+                ))}
+              </GridList>
+            </div>
+          </Grid>
         </Grid>
 
         {/* Project 3 */}
-        <Grid item xs={12} sm={8} md={6}>
-          <Card className={classes.cardContainer}>
-            <CardMedia
-              component="img"
-              alt="Project 5"
-              height="140"
-              image={SolidworksImg}
-              style={{
-                objectFit: "contain",
-                backgroundColor: "#ADB2D3",
-              }}
-            />
-            <CardContent>
-              <Typography
-                gutterBottom
-                variant="h5"
-                className={classes.projectTitle}
-              >
-                SolidWorks Personal Projects
-              </Typography>
-              <Typography
-                variant="body2"
-                color="textSecondary"
-                component="p"
-                className={classes.projectDescription}
-              >
-                Wanting to gain more practice with Solidworks this summer, I
-                followed Youtube tutorials on smaller projects like a pushpin,
-                spiral staircase, and a volleyball. Solidworks is such a great
-                design tool and I'm excited to get more familiar with it!
-              </Typography>
-            </CardContent>
-            <CardActions>
-              <Button
-                size="small"
-                color="primary"
-                onClick={() =>
-                  window.open(
-                    "https://github.com/2020summerstartup/sustainability"
-                  )
-                }
-              >
-                Solidworks
-              </Button>
-              <Button
+        <Grid container justify="center">
+          <Grid item xs={12} sm={8} md={6}>
+            <Card className={classes.cardContainer}>
+              <CardMedia
+                component="img"
+                alt="Project 5"
+                height="140"
+                image={SolidworksImg}
+                style={{
+                  objectFit: "contain",
+                  backgroundColor: "#ADB2D3",
+                }}
+              />
+              <CardContent>
+                <Typography
+                  gutterBottom
+                  variant="h5"
+                  className={classes.projectTitle}
+                >
+                  SolidWorks Personal Projects
+                </Typography>
+                <Typography
+                  variant="body2"
+                  color="textSecondary"
+                  component="p"
+                  className={classes.projectDescription}
+                >
+                  Wanting to gain more practice with Solidworks this summer, I
+                  followed Youtube tutorials on smaller projects like a pushpin,
+                  spiral staircase, and a volleyball. Solidworks is such a great
+                  design tool and I'm excited to get more familiar with it!
+                </Typography>
+              </CardContent>
+              <CardActions>
+                <Button
+                  size="small"
+                  color="primary"
+                  onClick={() =>
+                    window.open(
+                      "https://github.com/2020summerstartup/sustainability"
+                    )
+                  }
+                >
+                  Solidworks
+                </Button>
+                {/* <Button
                 size="small"
                 color="primary"
                 onClick={() =>
@@ -286,9 +315,30 @@ const Projects = () => {
                 }
               >
                 Live Demo
-              </Button>
-            </CardActions>
-          </Card>
+              </Button> */}
+              </CardActions>
+            </Card>
+          </Grid>
+
+          {/* GridList for Screenshots for Solidworks Personal Projects */}
+          <Grid item xs={12} sm={8}>
+            <div className={classes.screenshotWrapper}>
+              <GridList className={classes.gridList} cols={2} cellHeight="500">
+                {SolidworksScreenshotData.map((screenshot) => (
+                  <GridListTile
+                    key={screenshot.title}
+                    style={{ width: "auto" }}
+                  >
+                    <img
+                      src={screenshot.img}
+                      alt={screenshot.title}
+                      className={classes.screenshotImg}
+                    />
+                  </GridListTile>
+                ))}
+              </GridList>
+            </div>
+          </Grid>
         </Grid>
 
         {/* Project 4 */}
@@ -386,15 +436,6 @@ const Projects = () => {
                 }
               >
                 Github Repo
-              </Button>
-              <Button
-                size="small"
-                color="primary"
-                onClick={() =>
-                  window.open("https://myportfolio-7f381.web.app/")
-                }
-              >
-                Live Demo
               </Button>
             </CardActions>
           </Card>

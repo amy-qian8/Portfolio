@@ -35,13 +35,17 @@ const useStyles = makeStyles((theme) => ({
     height: "100%",
   },
   cardContainer: {
-    maxWidth: 345,
+    maxWidth: 450,
     margin: "5rem auto",
   },
   projectTitle: {
     fontWeight: "bold",
   },
   projectDescription: {
+    fontWeight: "bold",
+  },
+  button: {
+    color: "black",
     fontWeight: "bold",
   },
   //styles for gridlist of app store screenshots of EcoBud
@@ -119,14 +123,14 @@ const Projects = () => {
                 <CardActions>
                   <Button
                     size="small"
-                    color="primary"
+                    className={classes.button}
                     onClick={() => window.open("http://ecobud.app/")}
                   >
                     Live Demo
                   </Button>
                   <Button
                     size="small"
-                    color="primary"
+                    className={classes.button}
                     onClick={() =>
                       window.open(
                         "https://github.com/2020summerstartup/sustainability"
@@ -137,7 +141,7 @@ const Projects = () => {
                   </Button>
                   <Button
                     size="small"
-                    color="primary"
+                    className={classes.button}
                     onClick={() =>
                       window.open(
                         "https://drive.google.com/file/d/1T3XSYBylfWAzB2Ok8hNUsBUSm7043s22/view"
@@ -148,7 +152,7 @@ const Projects = () => {
                   </Button>
                   <Button
                     size="small"
-                    color="primary"
+                    className={classes.button}
                     onClick={() =>
                       window.open("https://www.linkedin.com/company/hmcecobud")
                     }
@@ -229,7 +233,7 @@ const Projects = () => {
                 <CardActions>
                   <Button
                     size="small"
-                    color="primary"
+                    className={classes.button}
                     onClick={() =>
                       window.open(
                         "https://drive.google.com/drive/folders/19WcNUWH8luIgR2jFo6X-WEAmqrIIspXJ?usp=sharing"
@@ -248,7 +252,7 @@ const Projects = () => {
                 <GridList
                   className={`${classes.gridList} ${styles.gridList}`}
                   cols={2}
-                  cellHeight="500"
+                  cellHeight="400"
                 >
                   {GripperScreenshotData.map((screenshot) => (
                     <GridListTile
@@ -277,7 +281,10 @@ const Projects = () => {
           {/* Project 3 */}
           <Grid container justify="center">
             <Grid item xs={12} sm={8} md={6}>
-              <Card className={classes.cardContainer}>
+              <Card
+                className={classes.cardContainer}
+                style={{ maxWidth: "800px" }}
+              >
                 <CardMedia
                   component="img"
                   alt="Project 5"
@@ -302,17 +309,17 @@ const Projects = () => {
                     component="p"
                     className={classes.projectDescription}
                   >
-                    Wanting to gain more practice with Solidworks this summer, I
-                    followed Youtube tutorials on smaller projects like a
-                    pushpin, spiral staircase, and a volleyball. Solidworks is
-                    such a great design tool and I'm excited to get more
-                    familiar with it!
+                    Wanting to gain more practice with Solidworks this summer,
+                    I'm following Youtube tutorials on Solidworks projects
+                    including the iPhoneX, a house, and a hammer. Solidworks is
+                    such a great design tool and I'm enjoying learning about all
+                    its features and tools that aren't taught in my classes!
                   </Typography>
                 </CardContent>
                 <CardActions>
                   <Button
                     size="small"
-                    color="primary"
+                    className={classes.button}
                     onClick={() =>
                       window.open(
                         "https://drive.google.com/drive/folders/1gDXtD652sJ4qQw3xfLYgaC_JatHPmPPG?usp=sharing"
@@ -394,7 +401,7 @@ const Projects = () => {
               <CardActions>
                 <Button
                   size="small"
-                  color="primary"
+                  className={classes.button}
                   onClick={() =>
                     window.open("https://github.com/amy-qian8/Covid19-Tracker")
                   }
@@ -403,7 +410,7 @@ const Projects = () => {
                 </Button>
                 <Button
                   size="small"
-                  color="primary"
+                  className={classes.button}
                   onClick={() =>
                     window.open("https://my-covid19-tracker.netlify.app/")
                   }
@@ -451,7 +458,7 @@ const Projects = () => {
               <CardActions>
                 <Button
                   size="small"
-                  color="primary"
+                  className={classes.button}
                   onClick={() =>
                     window.open("https://github.com/amy-qian8/Portfolio")
                   }

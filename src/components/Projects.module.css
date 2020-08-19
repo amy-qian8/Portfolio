@@ -1,0 +1,13 @@
+/* customize scrollbar */
+.gridList::-webkit-scrollbar {
+  width: 0.6rem;
+}
+
+.gridList::-webkit-scrollbar-track {
+  background: #222;
+}
+
+.gridList::-webkit-scrollbar-thumb {
+  background: var(--theme-primary);
+  border-radius: 10px;
+}

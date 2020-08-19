@@ -4,11 +4,6 @@ import { makeStyles } from "@material-ui/core/styles";
 import {
   Box,
   Grid,
-  // Card,
-  // CardActionArea,
-  // CardActions,
-  // CardContent,
-  // CardMedia,
   Button,
   Typography,
 } from "@material-ui/core";
@@ -51,7 +46,7 @@ const Portfolio = () => {
   return (
     <Box component="div" className={classes.mainContainer}>
       <Navbar />
-      <Grid container justify="center" style={{ padding: "0 2rem" }}>
+      <Grid container justify="center">
         {/* Extracurricular 1 */}
         <Grid item xs={12} sm={8} md={6}>
           <div className={`${styles.card} ${styles.longTitle}`}>

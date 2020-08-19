@@ -20,6 +20,7 @@ body::-webkit-scrollbar-track {
 
 body::-webkit-scrollbar-thumb {
   background: var(--theme-primary);
+  border-radius: 10px;
 }
 
 /* customize background */

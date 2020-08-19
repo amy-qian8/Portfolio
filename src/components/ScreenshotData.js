@@ -37,11 +37,11 @@ const EcoBudScreenshotData = [
 const GripperScreenshotData = [
   {
     img: GripperDimetricImg,
-    title: "Gripper",
+    title: "Gripper Claw- Dimetric View",
   },
   {
     img: GripperFrontImg,
-    title: "Front View",
+    title: "Gripper Claw- Front View",
   },
 ];
 
@@ -49,15 +49,27 @@ const SolidworksScreenshotData = [
   {
     img: iPhoneXImg,
     title: "iPhoneX",
+    description:
+      "Displayed with screenshot of tutorial page from my EcoBud app!",
   },
   {
     img: HouseImg,
     title: "House",
+    description:
+      "Practice with mating separate parts to create an entire assembly",
   },
   {
     img: HammerImg,
     title: "Hammer",
+    description:
+      "I was supposed to machine a physical hammer in E4 last semester but couldn't because of the Covid pandemic so I CADded one on Solidworks!",
   },
+  // {
+  //   img: VolleyballImg,
+  //   title: "Volleyball",
+  //   description:
+  //     "Loved playing high school and club volleyball!",
+  // },
 ];
 
 export default EcoBudScreenshotData;

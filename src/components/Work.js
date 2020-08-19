@@ -146,7 +146,17 @@ const Work = () => {
               gutterBottom
               style={{ color: "var(--theme-tertiary)", fontWeight: "bold" }}
             >
-              Harvey Mudd College
+              <a
+                href="https://www.hmc.edu/about-hmc/fast-facts/"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  textDecoration: "none",
+                  color: "var(--theme-tertiary)",
+                }}
+              >
+                Harvey Mudd College
+              </a>
             </Typography>
             <Typography
               variant="body1"
@@ -179,7 +189,17 @@ const Work = () => {
               gutterBottom
               style={{ color: "var(--theme-tertiary)", fontWeight: "bold" }}
             >
-              Harvey Mudd College
+              <a
+                href="https://www.hmc.edu/about-hmc/fast-facts/"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  textDecoration: "none",
+                  color: "var(--theme-tertiary)",
+                }}
+              >
+                Harvey Mudd College
+              </a>
             </Typography>
             <Typography
               variant="body1"
@@ -216,8 +236,11 @@ const Work = () => {
               <a
                 href="https://www.zymoresearch.com/"
                 target="_blank"
-                rel="noopener noreferrer" 
-                style={{ textDecoration: "none", color: "var(--theme-tertiary)" }}
+                rel="noopener noreferrer"
+                style={{
+                  textDecoration: "none",
+                  color: "var(--theme-tertiary)",
+                }}
               >
                 Zymo Research
               </a>

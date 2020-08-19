@@ -5,7 +5,7 @@ import Navbar from "./Navbar";
 
 const useStyles = makeStyles((theme) => ({
   mainContainer: {
-    background: "var(--theme-bg)", 
+    background: "var(--theme-bg)",
   },
   timeLine: {
     position: "relative",
@@ -211,9 +211,16 @@ const Work = () => {
               variant="h6"
               align="center"
               gutterBottom
-              style={{ color: "var(--theme-tertiary)", fontWeight: "bold" }}
+              style={{ fontWeight: "bold" }}
             >
-              Zymo Research
+              <a
+                href="https://www.zymoresearch.com/"
+                target="_blank"
+                rel="noopener noreferrer" 
+                style={{ textDecoration: "none", color: "var(--theme-tertiary)" }}
+              >
+                Zymo Research
+              </a>
             </Typography>
             <Typography
               variant="body1"

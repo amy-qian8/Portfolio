@@ -171,7 +171,10 @@ const Portfolio = () => {
               component={Link}
               to="/portfolio"
               className={styles.button}
-              style={{ backgroundColor: "var(--theme-tertiary)", color: "white" }}
+              style={{
+                backgroundColor: "var(--theme-tertiary)",
+                color: "white",
+              }}
             >
               Gripper
             </Button>
@@ -180,13 +183,13 @@ const Portfolio = () => {
 
         {/* Extracurricular 4 */}
         <Grid item xs={12} sm={8} md={6}>
-          <div className={styles.card}>
+          <div className={`${styles.card} ${styles.longTitle}`}>
             <Typography
               variant="h5"
               className={`${styles.title} ${styles.apispam}`}
               style={{ backgroundColor: "var(--theme-accent)" }}
             >
-              APISPAM Mentor
+              Mentor for API Sponsor Program
             </Typography>
             <Typography
               variant="body2"
@@ -197,9 +200,8 @@ const Portfolio = () => {
               and is a peer mentoring program for new API students at Harvey
               Mudd College.
               <br />
-              <br />
-              We, mentors, serve as an additional resource for the freshmen in
-              helping them adjust to the HMC college experience, with an
+              <br />I advise 5 freshmen by helping them adjust to the HMC
+              college experience. I also host diversity-focused worshops with an
               emphasis on issues that intersect with Asian Pacific Islander Desi
               American identities.
             </Typography>

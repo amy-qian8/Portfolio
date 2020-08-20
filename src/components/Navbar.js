@@ -24,7 +24,6 @@ import {
   ContactMail,
   School,
 } from "@material-ui/icons";
-// import avatar from "../avatar.png";
 import myinitialslogoImg from "../images/myinitialslogo.svg";
 
 // CSS STYLES

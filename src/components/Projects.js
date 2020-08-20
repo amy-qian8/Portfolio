@@ -24,7 +24,6 @@ import styles from "./Projects.module.css";
 
 import SusCompImg from "../images/suslogo.svg";
 import CovidImg from "../images/covidlogo.png";
-// import AvatarImg from "../avatar.png";
 import myinitialslogoImg from "../images/myinitialslogo.svg";
 import SolidworksImg from "../images/solidworks.png";
 import MuddSubImg from "../images/muddsub.png";

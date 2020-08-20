@@ -2,8 +2,7 @@ import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import { Typography, Avatar, Grid, Box } from "@material-ui/core";
 import Typed from "react-typed";
-import MeImg from "../me.png";
-// import avatar from "../avatar.png";
+import MeImg from "../images/me.png";
 
 // CSS STYLES
 const useStyles = makeStyles((theme) => ({
@@ -13,8 +12,8 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: "1rem",
   },
   profilePic: {
-    width: "15rem",
-    height: "15rem",
+    width: "14rem",
+    height: "14rem",
     marginBottom: "1rem",
     border: "5px solid var(--theme-primary)",
     [theme.breakpoints.down("xs")]: {
@@ -62,8 +61,8 @@ const Header = () => {
             "Engineering Major",
             "Ready to make a positive impact!",
           ]}
-          typeSpeed={40}
-          backSpeed={60}
+          typeSpeed={60}
+          backSpeed={80}
           loop
         />
       </Typography>

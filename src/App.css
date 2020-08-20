@@ -25,12 +25,8 @@ body::-webkit-scrollbar-thumb {
 
 /* customize background */
 body {
-  background: url("background2.jpg")
+  background: url("./images/background.jpg")
   no-repeat center center fixed;
-  /* background: url(https://images.unsplash.com/photo-1519332978332-21b7d621d05e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=60)
-    no-repeat center center fixed; */
-  /* background: url(https://images.unsplash.com/photo-1493723843671-1d655e66ac1c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=60)
-    no-repeat center center fixed; */
   -webkit-background: cover;
   -moz-background: cover;
   -o-background: cover;

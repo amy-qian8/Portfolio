@@ -1,6 +1,6 @@
-/* customize scrollbar */
+/* customize scrollbar for gridlist */
 .gridList::-webkit-scrollbar {
-  width: 0.6rem;
+  height: 0.6rem;
 }
 
 .gridList::-webkit-scrollbar-track {

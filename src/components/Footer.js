@@ -29,28 +29,19 @@ const Footer = () => {
         className={classes.root}
         style={{ padding: 0 }}
         icon={<LinkedInIcon />}
-        onClick={() => {
-          window.location = "https://www.linkedin.com/in/amy-qian8/";
-          return null;
-        }}
+        onClick={() => window.open("https://www.linkedin.com/in/amy-qian8/")}
       />
       <BottomNavigationAction
         className={classes.root}
         style={{ padding: 0 }}
         icon={<GitHubIcon />}
-        onClick={() => {
-          window.location = "https://github.com/amy-qian8";
-          return null;
-        }}
+        onClick={() => window.open("https://github.com/amy-qian8")}
       />
       <BottomNavigationAction
         className={classes.root}
         style={{ padding: 0 }}
         icon={<FacebookIcon />}
-        onClick={() => {
-          window.location = "https://www.facebook.com/amy.qian8/";
-          return null;
-        }}
+        onClick={() => window.open("https://www.facebook.com/amy.qian8/")}
       />
     </BottomNavigation>
   );

@@ -44,8 +44,18 @@ const Portfolio = () => {
               className={`${styles.title} ${styles.swe}`}
               style={{ backgroundColor: "var(--theme-primary)" }}
             >
-              Co-President of <br />
-              Society of Women Engineers
+              <a
+                href="https://swe.org/"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  textDecoration: "none",
+                  color: "white",
+                }}
+              >
+                Co-President of <br />
+                Society of Women Engineers
+              </a>
             </Typography>
             <img
               src={SWEImg}
@@ -62,7 +72,7 @@ const Portfolio = () => {
               (and now virtually) like resume workshops, recruiting information
               sessions, etc throughout the year, open to all majors and genders.
               We also host events for Mudd students and Engineering Professor to
-              get to know each other outside of the classroom. 
+              get to know each other outside of the classroom.
               <br />
               <br />
               We are helping send 60+ Mudd students to the virtual National SWE
@@ -82,10 +92,7 @@ const Portfolio = () => {
               size="small"
               variant="contained"
               color="primary"
-              onClick={() => {
-                window.location = "https://hmcswe.weebly.com/";
-                return null;
-              }}
+              onClick={() => window.open("https://hmcswe.weebly.com/")}
               style={{
                 marginTop: "1rem",
               }}
@@ -103,8 +110,18 @@ const Portfolio = () => {
               className={`${styles.title} ${styles.case}`}
               style={{ backgroundColor: "var(--theme-secondary)" }}
             >
-              Case Dorm President <br />
-              (ASHMC Member)
+              <a
+                href="https://www.hmc.edu/ashmc/"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  textDecoration: "none",
+                  color: "white",
+                }}
+              >
+                Case Dorm President <br />
+                (ASHMC Member)
+              </a>
             </Typography>
             <img
               src={ASHMCImg}
@@ -145,7 +162,17 @@ const Portfolio = () => {
               className={`${styles.title} ${styles.muddsub}`}
               style={{ backgroundColor: "var(--theme-tertiary)" }}
             >
-              MuddSub Robotics
+              <a
+                href="https://muddsub.org/"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  textDecoration: "none",
+                  color: "white",
+                }}
+              >
+                MuddSub Robotics
+              </a>
             </Typography>
             <img
               src={AlfieImg}
@@ -199,7 +226,17 @@ const Portfolio = () => {
               className={`${styles.title} ${styles.apispam}`}
               style={{ backgroundColor: "var(--theme-accent)" }}
             >
-              Mentor for API Sponsor Program
+              <a
+                href="https://www.facebook.com/apispam/"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  textDecoration: "none",
+                  color: "white",
+                }}
+              >
+                Mentor for APISPAM
+              </a>
             </Typography>
             <img src={ApispamImg} alt="APISPAM" className={classes.image} />
             <Typography
@@ -229,7 +266,17 @@ const Portfolio = () => {
               className={`${styles.title} ${styles.intervarsity}`}
               style={{ backgroundColor: "var(--theme-primary)" }}
             >
-              5C InterVarsity Christian Fellowship
+              <a
+                href="http://www.3civ.org/"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  textDecoration: "none",
+                  color: "white",
+                }}
+              >
+                5C InterVarsity Christian Fellowship
+              </a>
             </Typography>
             <img
               src={IntervarsityImg}

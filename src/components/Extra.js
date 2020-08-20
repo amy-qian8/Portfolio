@@ -1,16 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { makeStyles } from "@material-ui/core/styles";
-import {
-  Box,
-  Grid,
-  Button,
-  Typography,
-} from "@material-ui/core";
+import { Box, Grid, Button, Typography } from "@material-ui/core";
 import Navbar from "./Navbar";
 import styles from "./Extra.module.css";
 
-// import CaseDormImg from "../images/casedorm.jfif";
+import SWEImg from "../images/swe.png";
+import ASHMCImg from "../images/ASHMC.png";
+import AlfieImg from "../images/AlfieMuddSub.png";
+import ApispamImg from "../images/Apispam.jpg";
+import IntervarsityImg from "../images/5CIV.png";
 
 const useStyles = makeStyles((theme) => ({
   mainContainer: {
@@ -18,19 +17,9 @@ const useStyles = makeStyles((theme) => ({
     height: "100%",
     overflow: "hidden",
   },
-  details: {
-    display: "flex",
-    flexDirection: "column",
-  },
-  content: {
-    flex: "0 0 auto",
-  },
-  cover: {
-    width: "300%",
-  },
-  cardContainer: {
-    maxWidth: 345,
-    margin: "5rem auto",
+  image: {
+    width: "100%",
+    margin: "0 auto",
   },
   projectTitle: {
     fontWeight: "bold",
@@ -55,8 +44,14 @@ const Portfolio = () => {
               className={`${styles.title} ${styles.swe}`}
               style={{ backgroundColor: "var(--theme-primary)" }}
             >
-              Co-President of Society of Women Engineers
+              Co-President of <br />
+              Society of Women Engineers
             </Typography>
+            <img
+              src={SWEImg}
+              alt="Harvey Mudd Society of Women Engineers"
+              className={classes.image}
+            />
             <Typography
               variant="body2"
               component="p"
@@ -100,8 +95,14 @@ const Portfolio = () => {
               className={`${styles.title} ${styles.case}`}
               style={{ backgroundColor: "var(--theme-secondary)" }}
             >
-              Case Dorm President
+              Case Dorm President <br />
+              (ASHMC Member)
             </Typography>
+            <img
+              src={ASHMCImg}
+              alt="Case Dorm at Harvey Mudd"
+              className={classes.image}
+            />
             <Typography
               variant="body2"
               component="p"
@@ -138,6 +139,12 @@ const Portfolio = () => {
             >
               MuddSub Robotics
             </Typography>
+            <img
+              src={AlfieImg}
+              alt="MuddSub's Underwater Robot name Alfie"
+              className={classes.image}
+              style={{ padding: "0.75rem 0" }}
+            />
             <Typography
               variant="body2"
               component="p"
@@ -186,6 +193,7 @@ const Portfolio = () => {
             >
               Mentor for API Sponsor Program
             </Typography>
+            <img src={ApispamImg} alt="APISPAM" className={classes.image} />
             <Typography
               variant="body2"
               component="p"
@@ -213,6 +221,11 @@ const Portfolio = () => {
             >
               5C InterVarsity Christian Fellowship
             </Typography>
+            <img
+              src={IntervarsityImg}
+              alt="5C InterVarsity Christian Fellowship"
+              className={classes.image}
+            />
             <Typography
               variant="body2"
               component="p"

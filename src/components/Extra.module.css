@@ -3,7 +3,7 @@
   margin: 5rem auto;
   padding: 65px 20px 20px;
   position: relative;
-  max-width: 345px;
+  max-width: 400px;
   height: auto;
   box-shadow: 0 2px 10px #666;
 }
@@ -73,10 +73,10 @@
   right: 0;
   bottom: -20px;
 }
-
+/* 
 .description {
   margin: 1rem 0 !important;
-}
+} */
 
 /*** Media Queries ***/
 @media screen and (max-width: 660px) {

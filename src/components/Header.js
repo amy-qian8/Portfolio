@@ -15,7 +15,8 @@ const useStyles = makeStyles((theme) => ({
     width: "14rem",
     height: "14rem",
     marginBottom: "1rem",
-    border: "5px solid var(--theme-primary)",
+    border: "5px solid white",
+    boxShadow: "2px 2px 3px var(--theme-tertiary)",
     [theme.breakpoints.down("xs")]: {
       width: "12rem",
       height: "12rem"
@@ -24,10 +25,11 @@ const useStyles = makeStyles((theme) => ({
   title: {
     color: "white",
     fontWeight: "bold",
+    textShadow: "2px 2px 3px var(--theme-primary)",
   },
   subtitle: {
-    color: "var(--theme-primary)",
-    textShadow: "2px 2px 3px black",
+    color: "var(--theme-bg)",
+    textShadow: "2px 2px 3px var(--theme-tertiary)",
     marginBottom: "3rem",
     fontWeight: "bold",
   },
@@ -61,8 +63,8 @@ const Header = () => {
             "Engineering Major",
             "Ready to make a positive impact!",
           ]}
-          typeSpeed={60}
-          backSpeed={80}
+          typeSpeed={25}
+          backSpeed={15}
           loop
         />
       </Typography>

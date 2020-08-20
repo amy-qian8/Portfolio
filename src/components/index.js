@@ -28,7 +28,7 @@ const Home = () => {
               value: 200,
               density: {
                 enable: true,
-                value_area: 1750,
+                value_area: 1500,
               },
             },
             shape: {
@@ -49,12 +49,12 @@ const Home = () => {
               },
             },
             opacity: {
-              value: 0.7,
+              value: 0.9,
               random: true,
               anim: {
                 enable: true,
                 speed: 1,
-                opactiy_min: 0.5,
+                opactiy_min: 0.7,
                 sync: true,
               },
             },

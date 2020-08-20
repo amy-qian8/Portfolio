@@ -18,11 +18,11 @@ import {
 } from "@material-ui/core";
 import {
   Menu,
-  AssignmentInd,
   Home,
+  Business,
   Apps,
+  PeopleAlt,
   ContactMail,
-  School,
 } from "@material-ui/icons";
 import myinitialslogoImg from "../images/myinitialslogo.svg";
 
@@ -73,7 +73,7 @@ const menuItems = [
     listPath: "/",
   },
   {
-    listIcon: <AssignmentInd />,
+    listIcon: <Business />,
     listText: "Work",
     listPath: "/work",
   },
@@ -83,9 +83,9 @@ const menuItems = [
     listPath: "/projects",
   },
   {
-    listIcon: <School />,
-    listText: "Extracurriculars",
-    listPath: "/extracurriculars",
+    listIcon: <PeopleAlt />,
+    listText: "Organizations",
+    listPath: "/organizations",
   },
   {
     listIcon: <ContactMail />,

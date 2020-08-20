@@ -138,7 +138,7 @@ const Work = () => {
               align="center"
               className={classes.subHeading}
             >
-              Computer Science Grader and Tutor
+              Computer Science Department Grader and Tutor
             </Typography>
             <Typography
               variant="h6"
@@ -163,8 +163,7 @@ const Work = () => {
               align="center"
               style={{ color: "var(--theme-secondary)", fontWeight: "bold" }}
             >
-              • Assist in grading and tutoring freshman in their introductory
-              computer science course{" "}
+              • Assist in grading and tutoring freshman in{" "}
               <a
                 href="https://www.cs.hmc.edu/twiki/bin/view/CS5"
                 target="_blank"
@@ -175,8 +174,8 @@ const Work = () => {
                 }}
               >
                 {" "}
-                (CS5 Gold)
-              </a>{" "}
+                CS5: Introduction to Computer Science
+              </a>,{" "}
               taught mostly in Python (with some Picobot & assembly language)
             </Typography>
           </Box>

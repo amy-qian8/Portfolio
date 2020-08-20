@@ -449,7 +449,7 @@ const Projects = () => {
                 >
                   This website! I utilize React JS, Material UI, HTML and CSS to
                   develop and mantain my online portfolio website. Using my
-                  skills I've learned from creating Ecobud, I wanted to showcase
+                  skills I've learned from creating EcoBud, I wanted to showcase
                   my experiences and projects on a website! Check it out on
                   mobile too, it's responsive!
                 </Typography>

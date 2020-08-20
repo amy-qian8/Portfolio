@@ -206,7 +206,7 @@ const Portfolio = () => {
               size="small"
               variant="contained"
               component={Link}
-              to="/portfolio"
+              to="/projects"
               style={{
                 backgroundColor: "var(--theme-tertiary)",
                 color: "white",

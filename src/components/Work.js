@@ -164,7 +164,20 @@ const Work = () => {
               style={{ color: "var(--theme-secondary)", fontWeight: "bold" }}
             >
               • Assist in grading and tutoring freshman in their introductory
-              computer science course
+              computer science course{" "}
+              <a
+                href="https://www.cs.hmc.edu/twiki/bin/view/CS5"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  textDecoration: "none",
+                  color: "var(--theme-secondary)",
+                }}
+              >
+                {" "}
+                (CS5 Gold)
+              </a>{" "}
+              taught mostly in Python (with some Picobot & assembly language)
             </Typography>
           </Box>
 

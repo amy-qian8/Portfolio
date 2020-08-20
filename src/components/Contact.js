@@ -34,8 +34,6 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   formWrapper: {
-    // marginTop: theme.spacing(3),
-    // marginBottom: theme.spacing(3),
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
@@ -130,6 +128,7 @@ const Contact = () => {
             variant="h4"
             style={{
               margin: "0.5rem 0",
+              color: "var(--theme-tertiary)"
             }}
           >
             Contact Me
@@ -138,8 +137,7 @@ const Contact = () => {
             variant="subtitle1"
             style={{
               textAlign: "center",
-              // color: "var(--theme-secondary)",
-              // fontWeight: "bold",
+              color: "var(--theme-tertiary)",
             }}
           >
             I'm currently searching for an engineering or computer science

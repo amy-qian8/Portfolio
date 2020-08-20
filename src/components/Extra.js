@@ -61,9 +61,11 @@ const Portfolio = () => {
               We coordinate events with companies to host workshops on campus
               (and now virtually) like resume workshops, recruiting information
               sessions, etc throughout the year, open to all majors and genders.
+              We also host events for Mudd students and Engineering Professor to
+              get to know each other outside of the classroom. 
               <br />
               <br />
-              We are helping send 40+ Mudd students to the virtual National SWE
+              We are helping send 60+ Mudd students to the virtual National SWE
               Conference this year (more than ever before!). Also in the spring,
               we host WEST Conference for high school girls to encourage girls
               to pursue a STEM major by listening to keynote speakers about
@@ -71,6 +73,10 @@ const Portfolio = () => {
               workshops with Mudd Engineering Professors, and learning about
               what's its like to be a student at Mudd. I love leading a club
               that has such a positive impact!
+              <br />
+              <br />
+              Want to learn more about SWE at Mudd? Click the link to the
+              website we created below!
             </Typography>
             <Button
               size="small"
@@ -80,7 +86,9 @@ const Portfolio = () => {
                 window.location = "https://hmcswe.weebly.com/";
                 return null;
               }}
-              className={styles.button}
+              style={{
+                marginTop: "1rem",
+              }}
             >
               Website
             </Button>
@@ -172,10 +180,10 @@ const Portfolio = () => {
               variant="contained"
               component={Link}
               to="/portfolio"
-              className={styles.button}
               style={{
                 backgroundColor: "var(--theme-tertiary)",
                 color: "white",
+                marginTop: "1rem",
               }}
             >
               Gripper
@@ -203,10 +211,12 @@ const Portfolio = () => {
               and is a peer mentoring program for new API students at Harvey
               Mudd College.
               <br />
-              <br />I advise 5 freshmen by helping them adjust to the HMC
-              college experience. I also host diversity-focused worshops with an
-              emphasis on issues that intersect with Asian Pacific Islander Desi
-              American identities.
+              <br />
+              Last year, I was a sponsee and this year I am a sponser! I advise
+              5 freshmen by helping them adjust to the HMC college experience. I
+              also host diversity-focused worshops with an emphasis on issues
+              that intersect with Asian Pacific Islander Desi American
+              identities.
             </Typography>
           </div>
         </Grid>

@@ -29,10 +29,13 @@ const useStyles = makeStyles((theme) => ({
   },
   button: {
     marginTop: "1rem",
+    [theme.breakpoints.down('md')]: {
+      margin: "1.5rem",
+    },
     [theme.breakpoints.down('sm')]: {
       margin: "1.5rem",
       marginTop: 0,
-    }
+    },
   },
 }));
 
@@ -256,7 +259,7 @@ const Portfolio = () => {
               <br />
               Last year, I was a sponsee and this year I am a sponsor! I advise
               5 freshmen by helping them adjust to the HMC college experience. I
-              also host diversity-focused worshops with an emphasis on issues
+              also host diversity-focused workshops with an emphasis on issues
               that intersect with Asian Pacific Islander Desi American
               identities.
             </Typography>

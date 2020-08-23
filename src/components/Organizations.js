@@ -29,12 +29,13 @@ const useStyles = makeStyles((theme) => ({
   },
   button: {
     marginTop: "1rem",
-    [theme.breakpoints.down('md')]: {
-      margin: "1.5rem",
+    [theme.breakpoints.between('450', 'sm')]: {
+      margin: "1rem",
+      marginLeft: "0",
     },
-    [theme.breakpoints.down('sm')]: {
+    [theme.breakpoints.down('450')]: {
       margin: "1.5rem",
-      marginTop: 0,
+      marginTop: "0",
     },
   },
 }));

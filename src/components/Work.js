@@ -175,8 +175,9 @@ const Work = () => {
               >
                 {" "}
                 CS5: Introduction to Computer Science
-              </a>,{" "}
-              taught mostly in Python (with some Picobot & assembly language)
+              </a>
+              , taught mostly in Python (with some Picobot & assembly language){" "}
+              <br />•	Counsel students in exploration of computer science
             </Typography>
           </Box>
 

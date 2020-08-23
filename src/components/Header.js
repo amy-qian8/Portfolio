@@ -12,14 +12,14 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: "1rem",
   },
   profilePic: {
-    width: "14rem",
-    height: "14rem",
+    width: "18rem",
+    height: "18rem",
     marginBottom: "1rem",
     border: "5px solid white",
     boxShadow: "2px 2px 3px var(--theme-tertiary)",
     [theme.breakpoints.down("xs")]: {
-      width: "12rem",
-      height: "12rem"
+      width: "13rem",
+      height: "13rem"
     }
   },
   title: {

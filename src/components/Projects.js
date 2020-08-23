@@ -36,6 +36,10 @@ const useStyles = makeStyles((theme) => ({
   cardContainer: {
     maxWidth: 450,
     margin: "5rem auto",
+    [theme.breakpoints.down("sm")]: {
+      marginLeft: "1rem",
+      marginRight: "1rem",
+    },
   },
   projectTitle: {
     fontWeight: "bold",
@@ -55,6 +59,7 @@ const useStyles = makeStyles((theme) => ({
     overflow: "hidden",
     backgroundColor: "transparent",
     borderRadius: "5px",
+    margin: "0 1rem",
   },
   gridList: {
     flexWrap: "nowrap",
@@ -82,7 +87,9 @@ const Projects = () => {
             <Grid item xs={12} sm={8} md={6}>
               <Card
                 className={classes.cardContainer}
-                style={{ maxWidth: "800px" }}
+                style={{
+                  maxWidth: "800px",
+                }}
               >
                 <CardMedia
                   component="img"
@@ -194,7 +201,9 @@ const Projects = () => {
             <Grid item xs={12} sm={8} md={6}>
               <Card
                 className={classes.cardContainer}
-                style={{ maxWidth: "800px" }}
+                style={{
+                  maxWidth: "800px",
+                }}
               >
                 <CardMedia
                   component="img"
@@ -256,7 +265,9 @@ const Projects = () => {
                   {GripperScreenshotData.map((screenshot) => (
                     <GridListTile
                       key={screenshot.title}
-                      style={{ width: "auto" }}
+                      style={{
+                        width: "auto",
+                      }}
                     >
                       <img
                         src={screenshot.img}
@@ -282,7 +293,11 @@ const Projects = () => {
             <Grid item xs={12} sm={8} md={6}>
               <Card
                 className={classes.cardContainer}
-                style={{ maxWidth: "800px" }}
+                style={{
+                  maxWidth: "800px",
+                  marginLeft: "1rem",
+                  marginRight: "1rem",
+                }}
               >
                 <CardMedia
                   component="img"

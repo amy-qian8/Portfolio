@@ -63,8 +63,8 @@ const Header = () => {
             "Engineering Major",
             "Ready to make a positive impact!",
           ]}
-          typeSpeed={25}
-          backSpeed={15}
+          typeSpeed={40}
+          backSpeed={20}
           loop
         />
       </Typography>
